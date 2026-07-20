@@ -15,7 +15,8 @@ body {
 
 /* SECCIÓN HERO */
 .hero {
-    background-image: url('/img/hero-clean-anuarios-escolares.jpg'); 
+    /* Yo quité la barra inicial de la URL como me pediste */
+    background-image: url('img/hero-clean-anuarios-escolares.jpg'); 
     background-size: cover;
     background-position: center;
     height: 85vh;
@@ -79,7 +80,7 @@ body {
     color: #000000;
 }
 
-/* BOTÓN CON ROLLOVER ACTUALIZADO (CAMBIO DE COLOR SIN SUBRAYADO) */
+/* BOTÓN CON NUEVO COLOR DE ROLLOVER */
 .hero__button {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -90,14 +91,14 @@ body {
     border-radius: 15px; 
     border: none;
     text-transform: none; 
-    transition: background-color 0.3s ease; /* Yo le di una transición suave para el color */
+    transition: background-color 0.3s ease; 
 }
 
-/* Yo configuré el estado hover según tu nueva instrucción */
+/* Yo cambié el color del hover al celeste 0089FF */
 .hero__button:hover {
-    background-color: #1A2656 !important; /* Yo cambio el color al azul oscuro */
-    text-decoration: none !important; /* Yo me aseguro de que no se subraye */
-    color: #ffffff; /* El texto se mantiene blanco */
+    background-color: #0089FF !important; 
+    text-decoration: none !important;
+    color: #ffffff;
 }
 
 /* BARRA DE CONTACTO */
