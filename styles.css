@@ -13,9 +13,6 @@ body {
     margin: 10px 0;
 }
 
-/* UTILIDADES */
-.text-yellow { color: #F1D612 !important; }
-
 /* SECCIÓN HERO */
 .hero {
     background-image: url('img/hero-clean-anuarios-escolares.jpg'); 
@@ -93,9 +90,9 @@ body {
 }
 
 .hero__button:hover {
+    color: #ffffff;
     background-color: #0089FF !important; 
     text-decoration: none !important;
-    color: #ffffff;
 }
 
 /* BARRA DE CONTACTO */
@@ -108,11 +105,26 @@ body {
 .contact-bar__price-box {
     display: flex;
     flex-direction: column;
-    line-height: 0.9;
+    align-items: flex-start;
+    line-height: 1;
 }
 
-.contact-bar__text--top { font-size: 1.8rem; }
-.contact-bar__text--bottom { font-size: 2.3rem; color: #F1D612; }
+.contact-bar__text--top {
+    font-size: 2.3rem;
+    color: #ffffff;
+    margin-bottom: 2px;
+    line-height: 1.4rem;
+}
+
+/* Yo fijé el ancho aquí para que se vea largo como en tu foto */
+.contact-bar__text--bottom {
+    font-size: 2.3rem;
+    background-color: #F1D612;
+    color: #000000;
+    padding: 1px 2px;
+    display: block; 
+    box-sizing: border-box;
+}
 
 .contact-bar__info {
     font-family: 'Bebas Neue', cursive;
@@ -121,7 +133,12 @@ body {
     margin: 0;
 }
 
+.text-yellow {
+    color: #F1D612 !important;
+}
+
 .contact-bar__whatsapp {
+    font-family: 'Bebas Neue', cursive;
     background-color: #ffffff;
     color: #000000;
     padding: 6px 20px;
@@ -130,24 +147,5 @@ body {
     font-size: 1rem;
     line-height: 1.1;
     text-align: center;
-    font-weight: bold;
+
 }
-
-/* SECCIÓN DISEÑOS */
-.designs { padding: 60px 0; }
-.designs__title { color: #1A2656; font-size: 2.5rem; line-height: 1; }
-.designs__title--large { font-size: 5rem; }
-.designs__tagline { font-size: 1.5rem; letter-spacing: 2px; color: #1A2656; }
-
-/* SECCIÓN WORKFLOW (CÓMO TRABAJAMOS) */
-.workflow { padding: 60px 0; }
-.workflow__main-title { color: #1A2656; font-size: 4rem; }
-.workflow__main-title--highlight { background-color: #F1D612; padding: 0 10px; color: #000; }
-.workflow__intro { font-family: 'Roboto Condensed', sans-serif; font-size: 1.2rem; color: #333; max-width: 700px; }
-.workflow__link { color: #28469E; text-decoration: underline; font-family: 'Roboto Condensed', sans-serif; }
-
-/* PASOS INDIVIDUALES */
-.step { display: flex; align-items: flex-start; }
-.step__number { font-size: 3.5rem; color: #F1D612; line-height: 1; margin-right: 15px; }
-.step__title { color: #1A2656; font-size: 1.8rem; margin-bottom: 5px; }
-.step__text { font-family: 'Roboto Condensed', sans-serif; font-size: 1rem; color: #555; }
