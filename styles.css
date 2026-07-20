@@ -241,13 +241,67 @@ body {
     margin-top: -20px;
 }
 
-/* Yo configuré la imagen única del lado derecho */
-.designs-inspiradores__image {
+/* NUEVA ESTRUCTURA DE GRILLA PARA CONTROL DE ALTURAS EXACTO EN BODEGONES */
+.designs-inspiradores__grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr; /* Proporción 7/5 exacta */
+    grid-template-rows: 1fr 1fr;    /* Dos filas de igual alto */
+    /* Yo reduje el espacio horizontal de las columnas a solo 4px en celular para apretarlos */
+    gap: 10px 4px;                     
     width: 100%;
-    max-width: 450px; 
+    max-width: 450px; /* Yo bajé el ancho máximo de 550px a 450px para compactar el bodegón */
+    margin: 0 auto;
+}
+
+.designs-inspiradores__book-link {
+    display: flex;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.designs-inspiradores__book-link:hover {
+    transform: scale(1.03);
+    text-decoration: none;
+}
+
+/* Yo pegué el libro verde hacia el extremo derecho de su columna para pegarlo a los otros */
+.designs-inspiradores__book-link--main {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-content: flex-end;
+}
+
+/* Yo alineé el libro gris al tope superior y lo pegué hacia el borde izquierdo de su columna */
+.designs-inspiradores__book-link--sec-1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Yo alineé el libro rosado a la base inferior y lo pegué hacia el borde izquierdo de su columna */
+.designs-inspiradores__book-link--sec-2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.designs-inspiradores__book-main {
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin-left: 25px;
+}
+
+.designs-inspiradores__book-secondary {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 /* MEDIA QUERIES (Ajustes para Desktop - Pantallas desde 768px hacia arriba) */
@@ -304,7 +358,7 @@ body {
 
     /* Ajustes específicos del bloque de Diseños Inspiradores en Computador */
     .designs-inspiradores {
-        /* Yo reduje el degradado de color gris-azul un 30% (de 75% a 52.5%) */
+        /* Yo mantengo el degradado de color gris-azul un 30% (de 75% a 52.5%) */
         background: linear-gradient(to bottom, #55596b 65%, #ffffff 52.5%);
         /* Yo cambié el padding de 60px a 40px arriba para subir el grupo de texto de la barra gris */
         padding-top: 40px; 
@@ -343,7 +397,9 @@ body {
         color: #5A5E76;
     }
 
-    .designs-inspiradores__image {
-        max-width: 100%; 
+    /* Yo reduje el ancho máximo a 450px y acorté el gap horizontal a solo 6px en computador */
+    .designs-inspiradores__grid {
+        gap: 15px 6px;
+        max-width: 450px;
     }
 }
