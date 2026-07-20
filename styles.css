@@ -1,0 +1,121 @@
+/* ESTILOS BASE */
+body {
+    background-color: #ffffff; /* Yo puse el fondo blanco puro como pediste */
+    font-family: 'Bebas Neue', cursive;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+/* TIPOGRAFÍAS Y COLORES */
+.main-title {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.highlight {
+    background-color: #fff200;
+    padding: 0 5px;
+}
+
+.highlight--yellow {
+    color: #fff200;
+}
+
+.btn-primary {
+    background-color: #2b4c99;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 40px 15px;
+}
+
+.hero__subtitle {
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+.hero__main-heading {
+    font-size: 4rem;
+    color: #2b4c99;
+}
+
+/* SECCIONES */
+.section-title {
+    line-height: 1;
+}
+
+.section-title--large {
+    font-size: 3.5rem;
+    color: #2b4c99;
+}
+
+/* WORKFLOW */
+.workflow-title {
+    font-size: 3rem;
+    color: #2b4c99;
+}
+
+.workflow-step {
+    margin-bottom: 30px;
+}
+
+.workflow-step__number {
+    color: #fff200;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.workflow-step__title {
+    display: inline;
+    font-size: 1.5rem;
+}
+
+/* PRICING (FLAT DESIGN) */
+.pricing-plan {
+    border: none; /* Yo quité los bordes para que sea plano */
+    padding: 30px;
+}
+
+.pricing-plan__name {
+    font-size: 2rem;
+    color: #2b4c99;
+}
+
+.pricing-plan__price {
+    font-size: 3rem;
+    margin: 15px 0;
+}
+
+/* FAQ ACCORDION */
+.faq-title {
+    font-size: 3rem;
+    color: #2b4c99;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item__header {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-item__body {
+    padding-bottom: 20px;
+    font-family: Arial, sans-serif; /* Texto de lectura más cómodo */
+    font-size: 1rem;
+}
+
+/* CONTENEDORES INVISIBLES */
+.container {
+    background: transparent !important;
+}
