@@ -65,7 +65,7 @@ body {
 
 .hero__heading {
     color: #1a2656;
-    font-size: 4rem; /* Yo aumenté el tamaño a 4rem para celulares según lo solicitado */
+    font-size: 4rem; 
     font-weight: 900;
     margin: 5px 0;
     line-height: 0.9;
@@ -167,6 +167,89 @@ body {
     text-decoration: none;
 }
 
+/* SECCIÓN DISEÑOS INSPIRADORES (Corregida con Flexbox para evitar saltos raros) */
+.designs-inspiradores {
+    /* Yo aumenté la altura de la franja gris de 49% a 65% para que cubra los textos y baje hasta los libros */
+    background: linear-gradient(to bottom, #55596b 65%, #ffffff 65%);
+    padding: 40px 0;
+}
+
+/* Yo usé un contenedor flex vertical para ordenar cada bloque hacia abajo */
+.designs-inspiradores__text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Yo cambié de flex-start a center para centrar horizontalmente los textos en el celu */
+    text-align: center;  /* Yo cambié de left a center para centrar el bloque de textos en el celu */
+    margin-top: 0; 
+    margin-left: auto;   /* Yo agregué márgenes automáticos para centrar todo el bloque en el celular */
+    margin-right: auto;
+    width: fit-content;  /* Ajustado al ancho del contenido para que el centrado sea preciso */
+}
+
+.designs-inspiradores__badge-style {
+    background-color: #f1d612;
+    color: #5A5E76; /* Yo cambié el color a gris-azul para que sea idéntico al computador */
+    font-size: 1.7rem; /* Yo aumenté el tamaño un 30% (de 1.3rem a 1.7rem) para celulares */
+    line-height: 1;
+    padding: 1px 4px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 4px; /* Yo agregué margen para forzar la separación vertical */
+}
+
+/* Yo mantengo este contenedor como bloque controlado */
+.designs-inspiradores__title-wrap {
+    position: relative;
+    display: block;
+    margin-bottom: 15px; 
+}
+
+.designs-inspiradores__title-line {
+    font-size: 4.5rem; /* Yo aumenté el tamaño del título un 30% (de 3.5rem a 4.5rem) en celulares */
+    color: #ffffff;
+    line-height: 0.85;
+    margin: 0;
+    font-weight: 100;
+}
+
+/* Yo ajusté la posición para que "MODERNOS" se sobreponga al final del título */
+.designs-inspiradores__badge-modernos {
+    position: absolute;
+    background-color: #f1d612;
+    color: #5A5E76; /* Yo cambié el color a gris-azul como en desktop */
+    font-size: 1.8rem; /* Yo aumenté el tamaño un 30% (de 1.4rem a 1.8rem) en celulares */
+    line-height: 1;
+    padding: 1px 4px;
+    transform: rotate(-7deg);
+    right: 95px; /* Yo aumenté el desfase un 30% (de 50px a 65px) para que calce proporcional */
+    top: 35%;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.designs-inspiradores__badge-identity {
+    background-color: #f1d612;
+    color: #5A5E76; /* Yo cambié el color a gris-azul como en computador */
+    font-size: 1.7rem; /* Yo aumenté el tamaño un 30% (de 1.3rem a 1.7rem) en celulares */
+    line-height: 1;
+    padding: 1px 4px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: -20px;
+}
+
+/* Yo configuré la imagen única del lado derecho */
+.designs-inspiradores__image {
+    width: 100%;
+    max-width: 450px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* MEDIA QUERIES (Ajustes para Desktop - Pantallas desde 768px hacia arriba) */
 @media (min-width: 768px) {
     .hero__overlay {
@@ -207,5 +290,60 @@ body {
 
     .contact-bar__whatsapp {
         margin-top: 0;
+    }
+
+    /* Yo moví el margen negativo aquí para que afecte única y exclusivamente al computador */
+    .designs-inspiradores__text-group {
+        margin-top: -180px;
+        align-items: flex-start; /* Reseteado para que se alinee a la izquierda en computador */
+        text-align: left;        /* Reseteado para que los textos fluyan a la izquierda */
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+
+    /* Ajustes específicos del bloque de Diseños Inspiradores en Computador */
+    .designs-inspiradores {
+        /* Yo reduje el degradado de color gris-azul un 30% (de 75% a 52.5%) */
+        background: linear-gradient(to bottom, #55596b 65%, #ffffff 52.5%);
+        /* Yo cambié el padding de 60px a 40px arriba para subir el grupo de texto de la barra gris */
+        padding-top: 40px; 
+        padding-bottom: 60px;
+    }
+
+    /* Yo reduje las fuentes para que queden perfectas y ordenadas */
+    .designs-inspiradores__badge-style {
+        font-size: 2.2rem;
+        line-height: 1;
+        padding: 4px 2px;
+        margin-bottom: 0px;
+        color: #5A5E76;
+    }
+
+    .designs-inspiradores__title-line {
+        font-size: 5.8rem;
+        font-weight: 100;
+    }
+
+    .designs-inspiradores__badge-modernos {
+        font-size: 2.5rem; 
+        right: 84px; /* Empujado hacia afuera para evitar sobrelapados toscos */
+        top: 35%;
+        padding: 0px 2px;
+        line-height: 1;
+        color: #5A5E76;
+        display: inline-block;
+    }
+
+    .designs-inspiradores__badge-identity {
+        font-size: 2.5rem; 
+        line-height: 1;
+        padding: 4px 2px;
+        margin-top: -20px;
+        color: #5A5E76;
+    }
+
+    .designs-inspiradores__image {
+        max-width: 100%; 
     }
 }
