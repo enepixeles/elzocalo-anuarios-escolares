@@ -50,23 +50,25 @@ body {
 }
 
 .hero__line {
-    height: 1px;
+    height: 4px;
     width: 40px; 
     background-color: #1a2656;
 }
 
 .hero__subtitle {
     font-size: 0.9rem; 
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     margin: 0;
     color: #1a2656;
     font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
 }
 
 .hero__heading {
     color: #1a2656;
     font-size: 4rem; 
-    font-weight: 900;
+    font-weight: 600;
+    letter-spacing: 0px;
     margin: 5px 0;
     line-height: 0.9;
 }
@@ -83,16 +85,16 @@ body {
 .hero__highlight {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    background-color: #f1d612;
+    background-color: transpartent;
     padding: 0 5px;
-    color: #000000;
+    color: #1a2656;
 }
 
 .hero__button {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);    color: #ffffff;
-    font-size: 0.9rem;
+    background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);    
+    color: #ffffff;
     padding: 10px 25px;
     border-radius: 8px; 
     border: none;
@@ -652,13 +654,14 @@ body {
 
 /* Yo diseñé el botón de contacto centrado al final del acordeón */
 .faq__button {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     color: #ffffff;
     background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);
     border: none;
     border-radius: 6px; /* Esquinas suavemente redondeadas según tu maqueta */
     padding: 12px 30px;
-    font-size: 1.4rem;
+    font-size: 0.9rem; /* Yo lo cambié a 0.9rem en celular para que combine perfectamente con el Hero */
     display: inline-block;
     transition: transform 0.3s ease;
 }
@@ -682,10 +685,11 @@ body {
 
     .hero__subtitle {
         font-size: 1.2rem;
+        letter-spacing: 10px;
     }
 
     .hero__heading {
-        font-size: 5.5rem; 
+        font-size: 8rem; 
     }
 
     .hero__description {
@@ -877,5 +881,10 @@ body {
 
     .faq__body {
         font-size: 1.1rem;
+    }
+
+    /* Yo agregué esta regla aquí para que el botón de la FAQ suba a 1rem en computador, igualando al Hero */
+    .faq__button {
+        font-size: 1rem;
     }
 }
