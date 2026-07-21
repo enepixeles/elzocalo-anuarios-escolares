@@ -436,6 +436,150 @@ body {
     margin: 0;
 }
 
+/* SECCIÓN PRECIOS (Mobile First) */
+.precios {
+    background-color: #F0F0F0; /* Yo mantengo la sección transparente y plana sobre el fondo blanco para cumplir de forma estricta con la regla de limpieza absoluta de nuestro diseño */
+    padding: 60px 0;
+    margin-top: 2|0px;
+}
+
+.precios__title {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.precios__subtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: #1a2656;
+    line-height: 1.4;
+}
+
+/* Yo usé tu amarillo corporativo para destacar el texto de forma plana */
+.precios__highlight {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    background-color: #EBCF00;
+    color: #1a2656;
+    padding: 0 4px;
+}
+
+.precios__column {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.precios__plan-title {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 2.2rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.precios__plan-desc {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.precios__price-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.precios__price {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.precios__price-info {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #555555;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+/* Yo diseñé el botón ovalado en píldora con rollover inverso al pasar el mouse */
+.precios__button {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    background-color: transparent;
+    border: 2px solid #1a2656;
+    border-radius: 30px; /* Ovalado */
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.precios__button:hover {
+    background-color: #1a2656;
+    color: #ffffff;
+}
+
+.precios__divider {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 25px 0;
+}
+
+.precios__features-title {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.precios__feature {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.precios__feature strong {
+    color: #1a2656;
+    font-weight: 700;
+}
+
+.precios__preview-link {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #0089ff; /* Celeste */
+    text-decoration: underline;
+    font-size: 1.05rem;
+    display: inline-block;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.precios__preview-link:hover {
+    color: #28469e;
+}
+
+.precios__footnote {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    color: #888888;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 /* MEDIA QUERIES (Ajustes para Desktop - Pantallas desde 768px hacia arriba) */
 @media (min-width: 768px) {
     .hero__overlay {
@@ -586,5 +730,40 @@ body {
 
     .flujo-trabajo__step-highlight {
         font-size: 1.1rem;
+    }
+
+    /* AJUSTES DE LA SECCIÓN PRECIOS EN COMPUTADOR */
+    .precios {
+        padding: 80px 0;
+        margin-top: 100px;
+    }
+
+    .precios__title {
+        font-size: 4.5rem;
+    }
+
+    .precios__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .precios__plan-title {
+        font-size: 2.6rem;
+    }
+
+    .precios__plan-desc {
+        font-size: 1.1rem;
+        min-height: 75px; /* Yo forcé un alto mínimo para que todas las descripciones queden perfectamente alineadas */
+    }
+
+    .precios__price {
+        font-size: 4.5rem;
+    }
+
+    .precios__price-info {
+        font-size: 0.9rem;
+    }
+
+    .precios__column {
+        padding: 15px 20px;
     }
 }

@@ -1,7 +1,7 @@
 /*
 MI LÓGICA DE PENSAMIENTO ANTES DE PROGRAMAR:
 1. Esperar la carga: Yo me aseguro de que el computador cargue por completo el sitio antes de registrar clics o gatillar alguna acción en la pantalla.
-2. Registrar eventos de interacción: Yo escucho cuando el usuario presiona el botón de redirección de WhatsApp, el botón del Hero, interactúa con cada uno de los tres libros cliqueables de la sección Diseños Inspiradores o abre las condiciones del Flujo de Trabajo.
+2. Registrar eventos de interacción: Yo escucho cuando el usuario presiona el botón de redirección de WhatsApp, el botón del Hero, interactúa con cada uno de los tres libros cliqueables de la sección Diseños Inspiradores, abre las condiciones del Flujo de Trabajo o cotiza uno de los planes de Precios.
 3. Informar estado: Yo dejo una traza ordenada en la consola indicando exactamente cuál elemento interactivo fue pinchado en la pantalla.
 */
 
@@ -37,5 +37,23 @@ $(document).ready(function() {
         console.log("Yo registré un clic en el enlace de detalles y condiciones de trabajo.");
     });
 
-    console.log("Yo cargué todas las secciones: Hero, Barra de Contacto, Diseños Inspiradores y Flujo de Trabajo.");
+    // Yo escucho el clic en los botones de cotización de la sección Precios
+    $('.precios__button').on('click', function(e) {
+        if ($(this).attr('href') === '#') {
+            e.preventDefault();
+        }
+        var planCotizado = $(this).siblings('.precios__plan-title').text();
+        console.log("Yo registré un clic para cotizar el plan: " + planCotizado);
+    });
+
+    // Yo escucho el clic en los enlaces de previsualización de anuario de la sección Precios
+    $('.precios__preview-link').on('click', function(e) {
+        if ($(this).attr('href') === '#') {
+            e.preventDefault();
+        }
+        var planPrevisualizado = $(this).closest('.precios__column').find('.precios__plan-title').text();
+        console.log("Yo registré un clic para previsualizar el formato del plan: " + planPrevisualizado);
+    });
+
+    console.log("Yo cargué todas las secciones: Hero, Barra de Contacto, Diseños Inspiradores, Flujo de Trabajo y Precios.");
 });
