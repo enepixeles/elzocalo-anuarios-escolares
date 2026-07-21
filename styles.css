@@ -152,7 +152,7 @@ body {
     font-family: 'Bebas Neue', cursive;
     background-color: #ffffff;
     color: #242526;
-    padding: 10px 20px;
+    padding: 4px 20px;
     display: inline-block;
     text-decoration: none;
     font-size: 1.1rem;
@@ -304,6 +304,138 @@ body {
     display: block;
 }
 
+/* SECCIÓN FLUJO DE TRABAJO (Mobile First) */
+.flujo-trabajo {
+    background-color: #ffffff; /* Fondo blanco puro solicitado */
+    padding: 40px 0;
+}
+
+.flujo-trabajo__header {
+    text-align: left;
+}
+
+.flujo-trabajo__title-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.flujo-trabajo__title-line {
+    font-size: 4.5rem; /* Tamaño proporcional para celulares */
+    color: #1a2656;
+    line-height: 0.85;
+    margin: 0;
+    font-weight: 100;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Yo posicioné la caja inclinada de forma absoluta tal como en la sección anterior */
+.flujo-trabajo__badge-zocalo {
+    position: absolute;
+    background-color: #f1d612;
+    color: #1a2656;
+    font-size: 1.8rem; 
+    padding: 1px 4px;
+    transform: rotate(-7deg);
+    right: 40px; /* Desfase exacto al final del CÓMO en móvil */
+    top: 25%;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.flujo-trabajo__description {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    color: #1A2656;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.flujo-trabajo__description strong {
+    color: #1A2656;
+    font-weight: 700;
+}
+
+.flujo-trabajo__link {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    color: #0089ff;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 40px; /* Espacio antes de que empiecen los pasos en el celu */
+    transition: color 0.3s ease;
+}
+
+.flujo-trabajo__link:hover {
+    color: #28469e;
+    text-decoration: underline;
+}
+
+.flujo-trabajo__steps-row {
+    margin-top: 20px;
+}
+
+/* Estructura del Paso Individual */
+.flujo-trabajo__step {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Yo creé el círculo amarillo plano para alojar el número del paso */
+.flujo-trabajo__step-number-box {
+    width: 40px;
+    height: 40px;
+    background-color: #f1d612;
+    border-radius: 50%; /* Genera el círculo perfecto sin bordes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.flujo-trabajo__step-number {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.flujo-trabajo__step-content {
+    flex-grow: 1;
+}
+
+.flujo-trabajo__step-title {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 1.8rem;
+    line-height: 1;
+    margin: 0 0 5px 0;
+}
+
+.flujo-trabajo__step-desc {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    color: #1A2656;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+}
+
+/* Yo usé un tono amarillo un poco más oscuro (#d4b300) para garantizar legibilidad en fondo blanco puro */
+.flujo-trabajo__step-highlight {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #EBCF00;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
 /* MEDIA QUERIES (Ajustes para Desktop - Pantallas desde 768px hacia arriba) */
 @media (min-width: 768px) {
     .hero__overlay {
@@ -401,5 +533,58 @@ body {
     .designs-inspiradores__grid {
         gap: 15px 6px;
         max-width: 450px;
+    }
+
+    /* AJUSTES DE LA SECCIÓN FLUJO DE TRABAJO EN COMPUTADOR */
+    .flujo-trabajo {
+        margin-top:-120px;
+        padding: 0px 0;
+    }
+
+    .flujo-trabajo__title-line {
+        font-size: 5.8rem; /* Tamaño idéntico al título de Diseños Inspiradores en desktop */
+    }
+
+    .flujo-trabajo__badge-zocalo {
+        font-size: 2.3rem;
+        right: 80px; /* Desfase calibrado para encajar a la perfección al lado de CÓMO */
+        top: 28%;
+        padding: 2px 2px;
+    }
+
+    .flujo-trabajo__description {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .flujo-trabajo__link {
+        font-size: 1.2rem;
+        margin-bottom: 0px; /* Quitamos el margen en computador porque la fila tiene su propio margen superior */
+    }
+
+    .flujo-trabajo__steps-row {
+        margin-top: 50px; /* Separación amplia y limpia entre el título y el grid de pasos */
+    }
+
+    .flujo-trabajo__step-number-box {
+        width: 45px;
+        height: 45px;
+        margin-right: 20px;
+    }
+
+    .flujo-trabajo__step-number {
+        font-size: 2rem;
+    }
+
+    .flujo-trabajo__step-title {
+        font-size: 2.2rem;
+    }
+
+    .flujo-trabajo__step-desc {
+        font-size: 1.1rem;
+    }
+
+    .flujo-trabajo__step-highlight {
+        font-size: 1.1rem;
     }
 }
