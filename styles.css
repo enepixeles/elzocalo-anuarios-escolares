@@ -1,3 +1,432 @@
+<!DOCTYPE html>
+<html lang="es-Cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20260720-LANDING ANUARIOS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" as="style" href="https://dojiw2m9tvv09.cloudfront.net/market/vendor/bootstrap-4/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dojiw2m9tvv09.cloudfront.net/market/vendor/bootstrap-4/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="main-title">20260720-LANDING ANUARIOS</h1>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero__overlay">
+            <div class="container text-center">
+                <div class="hero__subtitle-container">
+                    <span class="hero__line"></span>
+                    <p class="hero__subtitle">SU HISTORIA MERECE SER ETERNA</p>
+                    <span class="hero__line"></span>
+                </div>
+                
+                <h2 class="hero__heading">ANUARIOS ESCOLARES 2026</h2>
+                
+                <p class="hero__description">
+                    Tendrás recuerdos inolvidables. Conoce cómo transformamos los momentos de tu comunidad en un libro 
+                    <span class="hero__highlight">que durará para siempre.</span>
+                </p>
+                
+                <button class="btn hero__button">Ver opciones disponibles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de Contacto -->
+    <section class="contact-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <div class="contact-bar__price-box">
+                        <span class="contact-bar__text-top">OBTÉN PRECIOS</span>
+                        <span class="contact-bar__text-bottom">PREFERENCIALES</span>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
+                    <p class="contact-bar__info">
+                        AL POR MAYOR Y ASESORÍA EN <span class="text-yellow">DISEÑO PROPIO</span> <br>
+                        DIRECTAMENTE CON UN EJECUTIVO
+                    </p>
+                </div>
+                
+                <div class="col-12 col-md-4 text-center text-md-right">
+                    <a href="#" class="contact-bar__whatsapp">
+                        CONTACTA CON NOSOTROS <br> POR WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Diseños Inspiradores -->
+    <section class="designs-inspiradores">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna Izquierda: Bloque de Texto alineado de forma vertical -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <div class="designs-inspiradores__text-group">
+                        <span class="designs-inspiradores__badge-style">CON ESTILO</span>
+                        <div class="designs-inspiradores__title-wrap">
+                            <h2 class="designs-inspiradores__title-line">DISEÑOS</h2>
+                            <span class="designs-inspiradores__badge-modernos">MODERNOS</span>
+                            <h2 class="designs-inspiradores__title-line">INSPIRADORES</h2>
+                        </div>
+                        <span class="designs-inspiradores__badge-identity">TU DISEÑO. TU IDENTIDAD</span>
+                    </div>
+                </div>
+                <!-- Columna Derecha: Tres Libros Maquetados con Enlaces Individuales -->
+                <div class="col-12 col-md-6">
+                    <div class="row align-items-stretch"> <!-- Yo cambié de align-items-center a stretch para igualar el alto de las columnas -->
+                        <!-- Libro Grande (Izquierda) -->
+                        <div class="col-7">
+                            <a href="#" class="designs-inspiradores__book-link">
+                                <img src="img/disenos-inspirdores-01.png" alt="" class="designs-inspiradores__book-main">
+                            </a>
+                        </div>
+                        <!-- Dos Libros Pequeños Stackeados (Derecha) -->
+                        <div class="col-5">
+                            <div class="designs-inspiradores__side-books">
+                                <a href="#" class="designs-inspiradores__book-link">
+                                    <img src="img/disenos-inspirdores-02.png" alt="" class="designs-inspiradores__book-secondary">
+                                </a>
+                                <a href="#" class="designs-inspiradores__book-link">
+                                    <img src="img/disenos-inspirdores-03.png" alt="" class="designs-inspiradores__book-secondary">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Flujo de Trabajo -->
+    <section class="flujo-trabajo">
+        <div class="container">
+            <!-- Fila del encabezado superior -->
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <div class="flujo-trabajo__header">
+                        <div class="flujo-trabajo__title-wrap">
+                            <h2 class="flujo-trabajo__title-line">CÓMO</h2>
+                            <span class="flujo-trabajo__badge-zocalo">EN EL ZÓCALO</span>
+                            <h2 class="flujo-trabajo__title-line">TRABAJAMOS</h2>
+                        </div>
+                        <p class="flujo-trabajo__description">
+                            Con un flujo que garantiza la <strong>entrega puntual</strong> de sus anuarios. Nos encargamos de la logística y el diseño para que usted pueda concentrarse en lo importante.
+                        </p>
+                        <a href="#" class="flujo-trabajo__link">Detalles del proceso y condiciones</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila del Grid 2x2 para los Pasos de Trabajo -->
+            <div class="row flujo-trabajo__steps-row">
+                <!-- Paso 1 -->
+                <div class="col-12 col-md-6 mb-5">
+                    <div class="flujo-trabajo__step">
+                        <div class="flujo-trabajo__step-number-box">
+                            <span class="flujo-trabajo__step-number">1</span>
+                        </div>
+                        <div class="flujo-trabajo__step-content">
+                            <h3 class="flujo-trabajo__step-title">COTIZACIÓN Y REQUERIMIENTOS</h3>
+                            <p class="flujo-trabajo__step-desc">Definimos los alcances, cantidad y detalles técnicos.</p>
+                            <p class="flujo-trabajo__step-highlight">Así obtienes un presupuesto claro.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paso 2 -->
+                <div class="col-12 col-md-6 mb-5">
+                    <div class="flujo-trabajo__step">
+                        <div class="flujo-trabajo__step-number-box">
+                            <span class="flujo-trabajo__step-number">2</span>
+                        </div>
+                        <div class="flujo-trabajo__step-content">
+                            <h3 class="flujo-trabajo__step-title">ENVÍO Y REVISIÓN DEL DISEÑO</h3>
+                            <p class="flujo-trabajo__step-desc">Nos envías tu anuario terminado o seleccionas una de nuestras plantillas disponibles.</p>
+                            <p class="flujo-trabajo__step-highlight">La identidad de tu institución es lo más importante.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paso 3 -->
+                <div class="col-12 col-md-6 mb-5 mb-md-0">
+                    <div class="flujo-trabajo__step">
+                        <div class="flujo-trabajo__step-number-box">
+                            <span class="flujo-trabajo__step-number">3</span>
+                        </div>
+                        <div class="flujo-trabajo__step-content">
+                            <h3 class="flujo-trabajo__step-title">ENVÍO Y REVISIÓN DE MAQUETA</h3>
+                            <p class="flujo-trabajo__step-desc">En 10 días hábiles elaboramos una maqueta digital para validar el resultado final antes de imprimir.</p>
+                            <p class="flujo-trabajo__step-highlight">Aseguramos que el contenido sea el correcto.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paso 4 -->
+                <div class="col-12 col-md-6">
+                    <div class="flujo-trabajo__step">
+                        <div class="flujo-trabajo__step-number-box">
+                            <span class="flujo-trabajo__step-number">4</span>
+                        </div>
+                        <div class="flujo-trabajo__step-content">
+                            <h3 class="flujo-trabajo__step-title">PRODUCCIÓN</h3>
+                            <p class="flujo-trabajo__step-desc">Una vez aprobada la maqueta y en tres semanas, iniciamos la impresión y terminaciones de tu anuario.</p>
+                            <p class="flujo-trabajo__step-highlight">Para que tus anuarios estén listos para la ceremonia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Precios -->
+    <section class="precios">
+        <div class="container">
+            <!-- Encabezado de la sección -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="precios__title">TENEMOS SOLUCIONES A TU MEDIDA</h2>
+                    <p class="precios__subtitle">
+                        Calidad premium y asesoría experta en cada formato. Descubre <span class="precios__highlight">la opción perfecta</span> para inmortalizar tu año escolar.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fila de las tres columnas de precios -->
+            <div class="row">
+                <!-- Plan Básico -->
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    <div class="precios__column">
+                        <h3 class="precios__plan-title">BÁSICO</h3>
+                        <p class="precios__plan-desc">
+                            Para capturar los hitos más importantes de tu año escolar en un formato ágil, elegante y fácil de compartir.
+                        </p>
+                        
+                        <div class="precios__price-container">
+                            <span class="precios__price">$14.990</span>
+                            <span class="precios__price-info">
+                                /IVA incluido, por unidad.<br>
+                                /tiraje de 30 unidades.
+                            </span>
+                        </div>
+                        
+                        <a href="#" class="btn precios__button">Conversa con un ejecutivo</a>
+                        
+                        <hr class="precios__divider">
+                        
+                        <div class="precios__features">
+                            <h4 class="precios__features-title">Incluye</h4>
+                            <p class="precios__feature">30-40 páginas full color en couché 170g.</p>
+                            <p class="precios__feature">Tapa flexible en cartón duplex laminado.</p>
+                            <p class="precios__feature"><strong>Anillado.</strong></p>
+                            <p class="precios__feature">
+                                Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rincón de los Recuerdos / Mensaje del Director(a) / Hitos Importantes
+                            </p>
+                            <p class="precios__feature">Asesoría Profesional.</p>
+                            
+                            <a href="#" class="precios__preview-link">Previsualizar este anuario</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Esencial -->
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    <div class="precios__column">
+                        <h3 class="precios__plan-title">ESENCIAL</h3>
+                        <p class="precios__plan-desc">
+                            Para capturar los hitos más importantes de tu año escolar en un formato ágil, elegante y fácil de compartir.
+                        </p>
+                        
+                        <div class="precios__price-container">
+                            <span class="precios__price">$29.990</span>
+                            <span class="precios__price-info">
+                                /IVA incluido, por unidad.<br>
+                                /tiraje de 30 unidades.
+                            </span>
+                        </div>
+                        
+                        <a href="#" class="btn precios__button">Conversa con un ejecutivo</a>
+                        
+                        <hr class="precios__divider">
+                        
+                        <div class="precios__features">
+                            <h4 class="precios__features-title">Incluye</h4>
+                            <p class="precios__feature">30-40 páginas full color en couché 170g.</p>
+                            <p class="precios__feature"><strong>Tapa dura emplacada.</strong></p>
+                            <p class="precios__feature"><strong>Encuadernado cosido encolado.</strong></p>
+                            <p class="precios__feature">
+                                Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rincón de los Recuerdos / Mensaje del Director(a) / Hitos Importantes
+                            </p>
+                            <p class="precios__feature">Asesoría Profesional.</p>
+                            
+                            <a href="#" class="precios__preview-link">Previsualizar este anuario</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Premium College -->
+                <div class="col-12 col-md-4">
+                    <div class="precios__column">
+                        <h3 class="precios__plan-title">PREMIUM COLLEGE</h3>
+                        <p class="precios__plan-desc">
+                            Diseñado para quienes no quieren dejar nada fuera. Espacio ilimitado para cada detalle, historia y recuerdo.
+                        </p>
+                        
+                        <div class="precios__price-container">
+                            <span class="precios__price">$45.990</span>
+                            <span class="precios__price-info">
+                                /IVA incluido, por unidad.<br>
+                                /tiraje de 40 unidades.
+                            </span>
+                        </div>
+                        
+                        <a href="#" class="btn precios__button">Conversa con un ejecutivo</a>
+                        
+                        <hr class="precios__divider">
+                        
+                        <div class="precios__features">
+                            <h4 class="precios__features-title">Incluye</h4>
+                            <p class="precios__feature"><strong>100-150 páginas full color en couché 170g.</strong></p>
+                            <p class="precios__feature"><strong>Tapa dura emplacada.</strong></p>
+                            <p class="precios__feature"><strong>Encuadernado cosido encolado.</strong></p>
+                            <p class="precios__feature">
+                                Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rincón de los Recuerdos / Mensaje del Director(a) / Hitos Importantes
+                            </p>
+                            <p class="precios__feature">Asesoría Profesional.</p>
+                            
+                            <a href="#" class="precios__preview-link">Previsualizar este anuario</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valores referenciales de nota al pie -->
+            <div class="row">
+                <div class="col-12 text-center mt-5">
+                    <p class="precios__footnote">*Valores Referenciales que deben ser precisados en la etapa de cotización.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section class="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto">
+                    <!-- Título de la sección diagramado en dos líneas -->
+                    <h2 class="faq__title">PREGUNTAS<br>FRECUENTES</h2>
+                    
+                    <!-- Acordeón Bootstrap -->
+                    <div class="faq__accordion" id="faqAccordion">
+                        
+                        <!-- Pregunta 1 -->
+                        <div class="faq__item">
+                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                                <span class="faq__question">¿Con cuánto tiempo de anticipación debo encargar los anuarios?</span>
+                                <span class="faq__icon">+</span>
+                            </button>
+                            <div id="faqCollapse1" class="collapse" data-parent="#faqAccordion">
+                                <div class="faq__body">
+                                    Recomendamos iniciar el proceso al menos <strong>45 días</strong> antes de la fecha de entrega deseada si cuenta con el diseño de su anuario listo. Esto nos permite gestionar la maqueta (5 días hábiles), la producción (3 semanas) y cualquier ajuste necesario sin presiones. En caso de necesitar asesoría de diseño se recomienda <strong>60 días</strong> antes de la fecha de entrega requerida.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="faq__item">
+                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                <span class="faq__question">¿Qué pasa si no tengo experiencia diseñando un anuario?</span>
+                                <span class="faq__icon">+</span>
+                            </button>
+                            <div id="faqCollapse2" class="collapse" data-parent="#faqAccordion">
+                                <div class="faq__body">
+                                    ¡No te preocupes! Tenemos soluciones para todos los niveles de experiencia:<br><br>
+                                    <strong>Opción A (Uso de Plantillas)</strong>: Puedes optar por nuestras plantillas base, ya diseñadas y listas para usar. Solo debes enviarnos tu material (fotos y textos) y nosotros nos encargamos de integrarlo en el formato que elijas.<br><br>
+                                    <strong>Opción B (Servicio de Diseño)</strong>: Si prefieres un trabajo único y a medida, te pondremos en contacto con uno de nuestros diseñadores asociados. Él analizará tu proyecto y te entregará un presupuesto personalizado de diseño, el cual se cotiza de forma independiente al costo de impresión de la memoria.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="faq__item">
+                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                <span class="faq__question">¿Puedo ver cómo quedará el libro antes de que lo impriman masivamente?</span>
+                                <span class="faq__icon">+</span>
+                            </button>
+                            <div id="faqCollapse3" class="collapse" data-parent="#faqAccordion">
+                                <div class="faq__body">
+                                    ¡Absolutamente! Ese es un paso clave en nuestro proceso. Tras recibir tu material, elaboramos una maqueta en <strong>5 días hábiles</strong> para que revises y apruebes el resultado final antes de pasar a la producción total.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="faq__item">
+                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                <span class="faq__question">¿Qué archivos debo enviar para asegurar la calidad de impresión?</span>
+                                <span class="faq__icon">+</span>
+                            </button>
+                            <div id="faqCollapse4" class="collapse" data-parent="#faqAccordion">
+                                <div class="faq__body">
+                                    Para garantizar el mejor resultado, <strong>recomendamos enviar tu diseño en formato PDF de alta resolución (300 dpi)</strong>. Este formato asegura que tanto tus imágenes mantengan su nitidez como los textos se impriman con máxima definición. Si tienes dudas sobre cómo exportar tu archivo o requieres apoyo técnico, nuestro equipo de asesoría te guiará paso a paso para asegurar que todo esté listo para una impresión impecable.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="faq__item">
+                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                <span class="faq__question">¿Qué incluye la asesoría profesional que ofrecen?</span>
+                                <span class="faq__icon">+</span>
+                            </button>
+                            <div id="faqCollapse5" class="collapse" data-parent="#faqAccordion">
+                                <div class="faq__body">
+                                    Nuestro equipo revisa la viabilidad técnica de tu diseño, apoya en la corrección de formato si es necesario y asegura que el archivo final cumpla con todos los requisitos de impresión para que el resultado sea impecable.<br><br>
+                                    Además, si aún <strong>no cuentas con un anuario diseñado</strong>, esta asesoría incluye <strong>ponerte en contacto directo con un diseñador profesional</strong> para que pueda desarrollar tu proyecto desde cero según tus necesidades.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pregunta 6 -->
+                        <div class="faq__item">
+                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                <span class="faq__question">¿El despacho está incluido en el valor final?</span>
+                                <span class="faq__icon">+</span>
+                            </button>
+                            <div id="faqCollapse6" class="collapse" data-parent="#faqAccordion">
+                                <div class="faq__body">
+                                    Los valores publicados son referenciales. Durante la etapa de cotización inicial, definiremos los detalles de despacho y logística según tu ubicación para entregarte un presupuesto total transparente y sin sorpresas.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Botón centrado en la parte inferior -->
+                    <div class="text-center mt-5">
+                        <a href="#" class="btn faq__button">Conversa con un ejecutivo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <link rel="preload" href="https://dojiw2m9tvv09.cloudfront.net/market/vendor/jquery-3/jquery.min.js" as="script">
+    <link rel="preload" href="https://dojiw2m9tvv09.cloudfront.net/market/vendor/bootstrap-4/bootstrap.bundle.min.js" as="script">
+
+    <script src="https://dojiw2m9tvv09.cloudfront.net/market/vendor/jquery-3/jquery.min.js"></script>
+    <script src="https://dojiw2m9tvv09.cloudfront.net/market/vendor/bootstrap-4/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>--- START OF FILE text/css ---
+
 /* Yo configuré la base limpia con fondo blanco puro y tipografía Bebas Neue */
 * {
     box-sizing: border-box;
@@ -440,7 +869,7 @@ body {
 .precios {
     background-color: #F0F0F0; /* Yo mantengo la sección transparente y plana sobre el fondo blanco para cumplir de forma estricta con la regla de limpieza absoluta de nuestro diseño */
     padding: 60px 0;
-    margin-top: 2|0px;
+    margin-top: 20px; /* Yo corregí el error de escritura de la barra vertical */
 }
 
 .precios__title {
@@ -578,6 +1007,95 @@ body {
     color: #888888;
     font-size: 0.9rem;
     line-height: 1.4;
+}
+
+/* SECCIÓN PREGUNTAS FRECUENTES (Mobile First) */
+.faq {
+    background-color: #ffffff; /* Fondo blanco puro */
+    padding: 60px 0;
+}
+
+.faq__title {
+    font-family: 'Bebas Neue', cursive;
+    color: #1a2656;
+    font-size: 3rem; /* Tamaño solicitado en celulares */
+    line-height: 0.9;
+    margin-bottom: 25px;
+}
+
+.faq__accordion {
+    width: 100%;
+    border-top: 1px solid #eeeeee; /* Línea divisoria superior del acordeón plano */
+}
+
+.faq__item {
+    border-bottom: 1px solid #eeeeee; /* Línea divisoria inferior para cada ítem */
+}
+
+/* Yo configuré la cabecera interactiva plana sin bordes ni fondos toscos */
+.faq__header {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+}
+
+.faq__header:focus {
+    outline: none;
+}
+
+.faq__question {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700; /* Letras en negrita */
+    color: #1a2656;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.faq__icon {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1.5rem;
+    color: #1a2656;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.faq__body {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding-bottom: 20px;
+}
+
+.faq__body strong {
+    color: #1a2656;
+    font-weight: 700;
+}
+
+/* Yo diseñé el botón de contacto centrado al final del acordeón */
+.faq__button {
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    background-color: #28469e; /* Color de fondo azul */
+    border: none;
+    border-radius: 6px; /* Esquinas suavemente redondeadas según tu maqueta */
+    padding: 12px 30px;
+    font-size: 1.4rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.faq__button:hover {
+    background-color: #0089ff;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* MEDIA QUERIES (Ajustes para Desktop - Pantallas desde 768px hacia arriba) */
@@ -765,5 +1283,27 @@ body {
 
     .precios__column {
         padding: 15px 20px;
+    }
+
+    /* AJUSTES DE LA SECCIÓN PREGUNTAS FRECUENTES EN COMPUTADOR */
+    .faq {
+        padding: 80px 0;
+    }
+
+    .faq__title {
+        font-size: 4.5rem; /* Tamaño solicitado en desktop */
+        margin-bottom: 40px;
+    }
+
+    .faq__question {
+        font-size: 1.3rem;
+    }
+
+    .faq__icon {
+        font-size: 1.8rem;
+    }
+
+    .faq__body {
+        font-size: 1.1rem;
     }
 }

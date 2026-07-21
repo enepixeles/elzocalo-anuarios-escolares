@@ -1,7 +1,7 @@
 /*
 MI LÓGICA DE PENSAMIENTO ANTES DE PROGRAMAR:
 1. Esperar la carga: Yo me aseguro de que el computador cargue por completo el sitio antes de registrar clics o gatillar alguna acción en la pantalla.
-2. Registrar eventos de interacción: Yo escucho cuando el usuario presiona el botón de redirección de WhatsApp, el botón del Hero, interactúa con cada uno de los tres libros cliqueables de la sección Diseños Inspiradores, abre las condiciones del Flujo de Trabajo o cotiza uno de los planes de Precios.
+2. Registrar eventos de interacción: Yo escucho cuando el usuario presiona el botón de redirección de WhatsApp, el botón del Hero, interactúa con cada uno de los tres libros cliqueables de la sección Diseños Inspiradores, abre las condiciones del Flujo de Trabajo, cotiza uno de los planes de Precios o interactúa con el acordeón de Preguntas Frecuentes.
 3. Informar estado: Yo dejo una traza ordenada en la consola indicando exactamente cuál elemento interactivo fue pinchado en la pantalla.
 */
 
@@ -55,5 +55,23 @@ $(document).ready(function() {
         console.log("Yo registré un clic para previsualizar el formato del plan: " + planPrevisualizado);
     });
 
-    console.log("Yo cargué todas las secciones: Hero, Barra de Contacto, Diseños Inspiradores, Flujo de Trabajo y Precios.");
+    // Yo escucho el clic en el botón de cotización inferior de la sección FAQ
+    $('.faq__button').on('click', function(e) {
+        if ($(this).attr('href') === '#') {
+            e.preventDefault();
+        }
+        console.log("Yo registré un clic en el botón de contacto de la sección Preguntas Frecuentes.");
+    });
+
+    // Yo escucho el evento nativo de apertura de Bootstrap para cambiar el signo a (-) de forma automática
+    $('.faq__item').on('show.bs.collapse', function() {
+        $(this).find('.faq__icon').text('-');
+    });
+
+    // Yo escucho el evento nativo de cierre de Bootstrap para cambiar el signo a (+) de forma automática
+    $('.faq__item').on('hide.bs.collapse', function() {
+        $(this).find('.faq__icon').text('+');
+    });
+
+    console.log("Yo cargué todas las secciones: Hero, Barra de Contacto, Diseños Inspiradores, Flujo de Trabajo, Precios y FAQ.");
 });
