@@ -1,8 +1,9 @@
 /*
 MI LÓGICA DE PENSAMIENTO ANTES DE PROGRAMAR:
 1. Esperar la carga: Yo me aseguro de que el computador cargue por completo el sitio antes de registrar clics o gatillar alguna acción en la pantalla.
-2. Registrar eventos de interacción: Yo escucho cuando el usuario presiona el botón de redirección de WhatsApp, el botón del Hero, interactúa con cada uno de los tres libros cliqueables de la sección Diseños Inspiradores, abre las condiciones del Flujo de Trabajo, cotiza uno de los planes de Precios o interactúa con el acordeón de Preguntas Frecuentes.
-3. Informar estado: Yo dejo una traza ordenada en la consola indicando exactamente cuál elemento interactivo fue pinchado en la pantalla.
+2. Registrar eventos de interacción: Yo escucho cuando el usuario presiona el botón de redirección de WhatsApp, el botón del Hero, interactúa con cada uno de los tres libros cliqueables de la sección Diseños Inspiradores, abre las condiciones del Flujo de Trabajo o cotiza uno de los planes de Precios.
+3. Desplazamiento Suave (Scroll): Cuando el usuario pincha el botón del Hero "Ver opciones disponibles", yo calculo la altura donde comienza la sección de Precios en el computador y muevo el scroll de manera fluida y suave hasta allá.
+4. Informar estado: Yo dejo una traza ordenada en la consola indicando exactamente cuál elemento interactivo fue pinchado en la pantalla.
 */
 
 $(document).ready(function() {
@@ -12,9 +13,17 @@ $(document).ready(function() {
         console.log("Yo registré un clic en el botón de contacto de WhatsApp.");
     });
 
-    // Yo escucho el clic en el botón del Hero para comprobar la interacción
-    $('.hero__button').on('click', function() {
-        console.log("Yo registré un clic en el botón principal del Hero.");
+    // Yo escucho el clic en el botón del Hero para desplazar de forma suave la pantalla hasta la sección de Precios
+    $('.hero__button').on('click', function(e) {
+        // Yo prevengo cualquier comportamiento por defecto que pueda tener el botón
+        e.preventDefault();
+        
+        // Yo calculo la posición de la sección Precios y animo el scroll de la página de forma fluida
+        $('html, body').animate({
+            scrollTop: $('#precios').offset().top
+        }, 800); // Yo definí una duración de 800 milisegundos para que el viaje sea suave y elegante
+        
+        console.log("Yo desplacé la pantalla suavemente hasta la sección de Precios.");
     });
 
     // Yo escucho el clic en cada enlace de libro para detectar cuál de los tres fue pinchado
