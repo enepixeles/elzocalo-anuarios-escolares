@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="col-12 col-md-4 text-center text-md-right">
-                    <a href="#" class="contact-bar__whatsapp">
+                    <a href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F" class="contact-bar__whatsapp">
                         CONTACTA CON NOSOTROS <br> POR WHATSAPP
                     </a>
                 </div>
@@ -62,46 +62,98 @@
         </div>
     </section>
 
-    <!-- Sección Diseños Inspiradores -->
-    <section class="designs-inspiradores">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Columna Izquierda: Bloque de Texto alineado de forma vertical -->
-                <div class="col-12 col-md-6 mb-4 mb-md-0">
-                    <div class="designs-inspiradores__text-group">
-                        <span class="designs-inspiradores__badge-style">CON ESTILO</span>
-                        <div class="designs-inspiradores__title-wrap">
-                            <h2 class="designs-inspiradores__title-line">DISEÑOS</h2>
-                            <span class="designs-inspiradores__badge-modernos">MODERNOS</span>
-                            <h2 class="designs-inspiradores__title-line">INSPIRADORES</h2>
+<!-- Sección Diseños Inspiradores convertida en Slider -->
+    <section class="designs-inspiradores carousel slide" id="designsCarousel" data-ride="carousel" data-interval="false">
+        
+        <!-- Indicadores de posición (puntos inferiores del slider) -->
+        <ol class="carousel-indicators designs-inspiradores__indicators">
+            <li data-target="#designsCarousel" data-slide-to="0" class="active designs-inspiradores__indicator"></li>
+            <li data-target="#designsCarousel" data-slide-to="1" class="designs-inspiradores__indicator"></li>
+        </ol>
+
+        <!-- Contenedor principal de las diapositivas -->
+        <div class="carousel-inner designs-inspiradores__slider">
+            
+            <!-- Primer Slide (Diseño original) -->
+            <div class="carousel-item active designs-inspiradores__slide">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Columna Izquierda: Bloque de Texto alineado de forma vertical -->
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="designs-inspiradores__text-group">
+                                <span class="designs-inspiradores__badge-style">CON ESTILO</span>
+                                <div class="designs-inspiradores__title-wrap">
+                                    <h2 class="designs-inspiradores__title-line">DISEÑOS</h2>
+                                    <span class="designs-inspiradores__badge-modernos">MODERNOS</span>
+                                    <h2 class="designs-inspiradores__title-line">INSPIRADORES</h2>
+                                </div>
+                                <span class="designs-inspiradores__badge-identity">TU DISEÑO. TU IDENTIDAD</span>
+                            </div>
                         </div>
-                        <span class="designs-inspiradores__badge-identity">TU DISEÑO. TU IDENTIDAD</span>
-                    </div>
-                </div>
-                <!-- Columna Derecha: Tres Libros Maquetados con Enlaces Individuales -->
-                <div class="col-12 col-md-6">
-                    <div class="row align-items-stretch"> <!-- Yo cambié de align-items-center a stretch para igualar el alto de las columnas -->
-                        <!-- Libro Grande (Izquierda) -->
-                        <div class="col-7">
-                            <a href="#" class="designs-inspiradores__book-link">
-                                <img src="img/disenos-inspirdores-01.png" alt="" class="designs-inspiradores__book-main">
-                            </a>
-                        </div>
-                        <!-- Dos Libros Pequeños Stackeados (Derecha) -->
-                        <div class="col-5">
-                            <div class="designs-inspiradores__side-books">
-                                <a href="#" class="designs-inspiradores__book-link">
-                                    <img src="img/disenos-inspirdores-02.png" alt="" class="designs-inspiradores__book-secondary">
-                                </a>
-                                <a href="#" class="designs-inspiradores__book-link">
-                                    <img src="img/disenos-inspirdores-03.png" alt="" class="designs-inspiradores__book-secondary">
-                                </a>
+                        <!-- Columna Derecha: Tres Libros Maquetados con Enlaces Individuales -->
+                        <div class="col-12 col-md-6">
+                            <div class="row align-items-stretch">
+                                <!-- Libro Grande (Izquierda) -->
+                                <div class="col-7">
+                                    <a href="https://www.imprentaelzocalo.cl/product/anuario-escolar-tapa-dura-el-zocalo" target="_blank" class="designs-inspiradores__book-link">
+                                        <img src="img/disenos-inspirdores-01.png" alt="" class="designs-inspiradores__book-main">
+                                    </a>
+                                </div>
+                                <!-- Dos Libros Pequeños Stackeados (Derecha) -->
+                                <div class="col-5">
+                                    <div class="designs-inspiradores__side-books">
+                                        <a href="https://www.imprentaelzocalo.cl/product/anuario-escolar-hasta-120-paginas-el-zocalo" target="_blank" class="designs-inspiradores__book-link">
+                                            <img src="img/disenos-inspirdores-02.png" alt="" class="designs-inspiradores__book-secondary">
+                                        </a>
+                                        <a href="https://www.imprentaelzocalo.cl/product/anuario-escolar-hasta-120-paginas-tapa-dura-espiral-el-zocalo" target="_blank" class="designs-inspiradores__book-link">
+                                            <img src="img/disenos-inspirdores-03.png" alt="" class="designs-inspiradores__book-secondary">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Segundo Slide (Duplicado exacto del primero por ahora) -->
+            <div class="carousel-item designs-inspiradores__slide">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Columna Izquierda: Bloque de Texto alineado de forma vertical -->
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="designs-inspiradores__text-group2">
+                                <span class="designs-inspiradores__badge-style">CON ESTILO</span>
+                                <div class="designs-inspiradores__title-wrap">
+                                    <h2 class="designs-inspiradores__title-line">DISEÑOS</h2>
+                                    <span class="designs-inspiradores__badge-modernos">MODERNOS</span>
+                                    <h2 class="designs-inspiradores__title-line">INSPIRADORES</h2>
+                                </div>
+                                <span class="designs-inspiradores__badge-identity">TU DISEÑO. TU IDENTIDAD</span>
+                            </div>
+                        </div>
+                        <!-- Columna Derecha: Imagen única destacada -->
+                        <div class="col-12 col-md-6 text-center text-md-left">
+                            <a href="https://www.imprentaelzocalo.cl/product/anuario-escolar-60-80-paginas-el-zocalo" target="_blank" class="designs-inspiradores__book-link designs-inspiradores__book-link--single">
+                                <img src="img/DISEÑOS-INSPIRADORES-02.png" alt="Detalle interior de anuario" class="img-fluid designs-inspiradores__book-single">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Controles laterales de navegación -->
+        <a class="carousel-control-prev designs-inspiradores__control designs-inspiradores__control--prev" href="#designsCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next designs-inspiradores__control designs-inspiradores__control--next" href="#designsCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+
     </section>
 
     <!-- Sección Flujo de Trabajo -->
@@ -119,7 +171,7 @@
                         <p class="flujo-trabajo__description">
                             Con un flujo que garantiza la <strong>entrega puntual</strong> de sus anuarios. Nos encargamos de la logística y el diseño para que usted pueda concentrarse en lo importante.
                         </p>
-                        <a href="#" class="flujo-trabajo__link">Detalles del proceso y condiciones</a>
+                        <a href="https://www.imprentaelzocalo.cl/policies/detalles-del-proceso-y-condiciones-anuarios-escolares" target="_blank" class="flujo-trabajo__link">Detalles del proceso y condiciones</a>
                     </div>
                 </div>
             </div>
@@ -134,7 +186,7 @@
                         </div>
                         <div class="flujo-trabajo__step-content">
                             <h3 class="flujo-trabajo__step-title">COTIZACIÓN Y REQUERIMIENTOS</h3>
-                            <p class="flujo-trabajo__step-desc">Definimos los alcances, cantidad, detalles técnicos y la recolección de tallas y diseño para los polerones de curso.</p>
+                            <p class="flujo-trabajo__step-desc">Definimos alcances, cantidad, detalles técnicos.<br>Toma 5 días hábiles.</p>
                             <p class="flujo-trabajo__step-highlight">Así obtienes un presupuesto claro.</p>
                         </div>
                     </div>
@@ -146,8 +198,8 @@
                             <span class="flujo-trabajo__step-number">2</span>
                         </div>
                         <div class="flujo-trabajo__step-content">
-                            <h3 class="flujo-trabajo__step-title">ENVÍO Y REVISIÓN DEL DISEÑO</h3>
-                            <p class="flujo-trabajo__step-desc">Nos envías tu anuario terminado o seleccionas una de nuestras plantillas disponibles.</p>
+                            <h3 class="flujo-trabajo__step-title">ENVÍO, RECEPCIÓN DE MATERIAL Y REVISIÓN DEL DISEÑO</h3>
+                            <p class="flujo-trabajo__step-desc">Varía según tu formato: 5 días hábiles si envías el PDF listo, 15 días para recopilar material si usas plantilla, o hasta 30 días hábiles en el plan Premium College (producción fotográfica y diseño total).</p>
                             <p class="flujo-trabajo__step-highlight">La identidad de tu institución es lo más importante.</p>
                         </div>
                     </div>
@@ -160,7 +212,7 @@
                         </div>
                         <div class="flujo-trabajo__step-content">
                             <h3 class="flujo-trabajo__step-title">ENVÍO Y REVISIÓN DE MAQUETA</h3>
-                            <p class="flujo-trabajo__step-desc">En 10 días hábiles elaboramos una maqueta digital para validar el resultado final antes de imprimir.</p>
+                            <p class="flujo-trabajo__step-desc">Enviamos una maqueta digital para validar el resultado final antes de imprimir.</p>
                             <p class="flujo-trabajo__step-highlight">Aseguramos que el contenido sea el correcto.</p>
                         </div>
                     </div>
@@ -213,21 +265,21 @@
                             </span>
                         </div>
                         
-                        <a href="#" class="btn precios__button">Conversa con un ejecutivo</a>
+                        <a href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F" class="btn precios__button">Conversa con un ejecutivo</a>
                         
                         <hr class="precios__divider">
                         
                         <div class="precios__features">
                             <h4 class="precios__features-title">Incluye</h4>
-                            <p class="precios__feature">30-40 páginas full color en couché 170g.</p>
-                            <p class="precios__feature">Tapa flexible en cartón duplex laminado.</p>
-                            <p class="precios__feature"><strong>Anillado.</strong></p>
+                            <p class="precios__feature"><strong>60-80 páginas full color en couché 130g.</strong></p>
+                            <p class="precios__feature">Tapa emplacada en cartón piedra de 2 mm con forro símil cuero (colores disponibles: negro, azul oscuro, verde y rojo).</p>
+                            <p class="precios__feature">Encuadernación: Anillado con espiral metálico recubierto continuo (colores disponibles: blanco, plata, azul, verde).</p>
                             <p class="precios__feature">
                                 Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rincón de los Recuerdos / Mensaje del Director(a) / Hitos Importantes
                             </p>
                             <p class="precios__feature">Asesoría Profesional.</p>
                             
-                            <a href="#" class="precios__preview-link">Previsualizar este anuario</a>
+                            <a href="https://www.imprentaelzocalo.cl/product/anuario-escolar-60-80-paginas-el-zocalo" class="precios__preview-link" target="_blank">Previsualizar este anuario</a>
                         </div>
                     </div>
                 </div>
@@ -248,22 +300,22 @@
                             </span>
                         </div>
                         
-                        <a href="#" class="btn precios__button">Conversa con un ejecutivo</a>
+                        <a href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F" class="btn precios__button">Conversa con un ejecutivo</a>
                         
                         <hr class="precios__divider">
                         
                         <div class="precios__features">
                             <h4 class="precios__features-title">Incluye</h4>
-                            <p class="precios__feature">30-40 páginas full color en couché 170g.</p>
+                            <p class="precios__feature"><strong> Hasta 120 páginas full color en couché 130g.</strong></p>
                             <p class="precios__feature"><strong>Tapa dura emplacada.</strong></p>
                             <p class="precios__feature"><strong>Encuadernado cosido encolado.</strong></p>
                             <p class="precios__feature">
                                 Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rincón de los Recuerdos / Mensaje del Director(a) / Hitos Importantes
                             </p>
-                            <p class="precios__feature"><strong>🧥 Incluye polerón de curso personalizado (para cada alumno).</strong></p>
                             <p class="precios__feature">Asesoría Profesional.</p>
+                            <br><br><br><br>
                             
-                            <a href="#" class="precios__preview-link">Previsualizar este anuario</a>
+                            <a href="https://www.imprentaelzocalo.cl/product/anuario-escolar-tapa-dura-el-zocalo" class="precios__preview-link" target="_blank">Previsualizar este anuario</a>
                         </div>
                     </div>
                 </div>
@@ -277,27 +329,29 @@
                         </p>
                         
                         <div class="precios__price-container">
-                            <span class="precios__price">$45.990</span>
+                            <span class="precios__price">$35.990</span>
                             <span class="precios__price-info">
                                 /IVA incluido, por unidad.<br>
                                 /tiraje de 40 unidades.
                             </span>
                         </div>
                         
-                        <a href="#" class="btn precios__button">Conversa con un ejecutivo</a>
+                        <a href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F" class="btn precios__button">Conversa con un ejecutivo</a>
                         
                         <hr class="precios__divider">
                         
                         <div class="precios__features">
                             <h4 class="precios__features-title">Incluye</h4>
-                            <p class="precios__feature"><strong>100-150 páginas full color en couché 170g.</strong></p>
+                            <p class="precios__feature"><strong>Hasta 150 páginas full color en couché 130g.</strong></p>
                             <p class="precios__feature"><strong>Tapa dura emplacada.</strong></p>
                             <p class="precios__feature"><strong>Encuadernado cosido encolado.</strong></p>
                             <p class="precios__feature">
                                 Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rincón de los Recuerdos / Mensaje del Director(a) / Hitos Importantes
                             </p>
-                            <p class="precios__feature"><strong>🌟 Servicio de Fotografía Profesional.</strong></p>
-                            <p class="precios__feature"><strong>🧥 Incluye polerón de curso personalizado (para cada alumno).</strong></p>
+                            <!-- <p class="precios__feature"><strong>🌟 Servicio de Fotografía Profesional.</strong></p>
+                            <p class="precios__feature"><strong>🧥 Incluye polerón de curso personalizado (para cada alumno).</strong></p> -->
+                            
+                            <p class="precios__feature">Puedes solicitar el servicio de fotografía profesional de forma independiente con un costo aparte para complementar el plan si lo necesitas.</p>
                             <p class="precios__feature">Asesoría Profesional.</p>
 
                             <a href="#" class="precios__preview-link">Previsualizar este anuario</a>
@@ -334,7 +388,7 @@
                             </button>
                             <div id="faqCollapse1" class="collapse" data-parent="#faqAccordion">
                                 <div class="faq__body">
-                                    Recomendamos iniciar el proceso al menos <strong>45 días</strong> antes de la fecha de entrega deseada si cuenta con el diseño de su anuario listo. Esto nos permite gestionar la maqueta (10 días hábiles), la producción (3 semanas) y cualquier ajuste necesario sin presiones. En caso de necesitar asesoría de diseño se recomienda <strong>60 días</strong> antes de la fecha de entrega requerida.
+                                    Recomendamos iniciar el proceso al menos 45 días antes de la fecha de entrega deseada si cuenta con el diseño de su anuario listo. Esto nos permite gestionar la maqueta (5 días hábiles), la producción (3 semanas) y cualquier ajuste necesario sin presiones. En caso de necesitar asesoría de diseño se recomienda 60 días antes de la fecha de entrega requerida.
                                 </div>
                             </div>
                         </div>
@@ -367,18 +421,7 @@
                             </div>
                         </div>
 
-                        <!-- Pregunta 4 (Anteriormente Pregunta 8) -->
-                        <div class="faq__item">
-                            <button class="faq__header collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                                <span class="faq__question">¿Cómo funciona la personalización y la elección de tallas para los polerones?</span>
-                                <span class="faq__icon">+</span>
-                            </button>
-                            <div id="faqCollapse4" class="collapse" data-parent="#faqAccordion">
-                                <div class="faq__body">
-                                    ¡Nosotros te facilitamos una pauta de tallas y una plantilla de diseño! El comité o representante del curso recopila las tallas y el diseño de su preferencia (o nos envía su idea), y nosotros nos encargamos de estampar los polerones para que cada alumno reciba el suyo junto con su anuario.
-                                </div>
-                            </div>
-                        </div>
+                
 
                         <!-- Pregunta 5 (Anteriormente Pregunta 3) -->
                         <div class="faq__item">

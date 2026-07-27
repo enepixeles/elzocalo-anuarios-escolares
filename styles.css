@@ -85,7 +85,7 @@ body {
 .hero__highlight {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    background-color: transpartent;
+    background-color: transparent;
     padding: 0 5px;
     color: #1a2656;
 }
@@ -99,17 +99,16 @@ body {
     border-radius: 8px; 
     border: none;
     text-transform: none; 
-    transition: transform 0.3s ease; /* Yo cambié la transición a transform para que el escalado sea fluido */
+    transition: transform 0.3s ease;
 }
 
-/* Yo configuré el rollover celeste sin subrayado */
 .hero__button:hover {
-    transform: scale(1.05); /* Yo apliqué un escalado del 5% al pasar el cursor, manteniendo el degradado original */
+    transform: scale(1.05);
     text-decoration: none !important;
     color: #ffffff;
 }
 
-/* BARRA DE CONTACTO (Fondo oscuro solicitado de 242526) */
+/* BARRA DE CONTACTO */
 .contact-bar {
     background-color: #242526;
     color: #ffffff;
@@ -148,7 +147,6 @@ body {
     color: #ffffff;
 }
 
-/* Yo configuré el botón de WhatsApp con fondo blanco y letras oscuras según tu captura */
 .contact-bar__whatsapp {
     font-family: 'Bebas Neue', cursive;
     background-color: #ffffff;
@@ -168,38 +166,35 @@ body {
     text-decoration: none;
 }
 
-/* SECCIÓN DISEÑOS INSPIRADORES (Corregida con Flexbox para evitar saltos raros) */
+/* SECCIÓN DISEÑOS INSPIRADORES */
 .designs-inspiradores {
-    /* Yo aumenté la altura de la franja gris de 49% a 65% para que cubra los textos y baje hasta los libros */
     background: linear-gradient(to bottom, #55596b 65%, #ffffff 65%);
     padding: 40px 0;
 }
 
-/* Yo usé un contenedor flex vertical para ordenar cada bloque hacia abajo */
 .designs-inspiradores__text-group {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Yo cambié de flex-start a center para centrar horizontalmente los textos en el celu */
-    text-align: center;  /* Yo cambié de left a center para centrar el bloque de textos en el celu */
+    align-items: center; 
+    text-align: center;  
     margin-top: 0; 
-    margin-left: auto;   /* Yo agregué márgenes automáticos para centrar todo el bloque en el celular */
+    margin-left: auto;   
     margin-right: auto;
-    width: fit-content;  /* Ajustado al ancho del contenido para que el centrado sea preciso */
+    width: fit-content;  
 }
 
 .designs-inspiradores__badge-style {
     background-color: #f1d612;
-    color: #5A5E76; /* Yo cambié el color a gris-azul para que sea idéntico al computador */
-    font-size: 1.7rem; /* Yo aumenté el tamaño un 30% (de 1.3rem a 1.7rem) para celulares */
+    color: #5A5E76; 
+    font-size: 1.7rem; 
     line-height: 1;
     padding: 1px 4px;
     display: inline-block;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-bottom: 4px; /* Yo agregué margen para forzar la separación vertical */
+    margin-bottom: 4px; 
 }
 
-/* Yo mantengo este contenedor como bloque controlado */
 .designs-inspiradores__title-wrap {
     position: relative;
     display: block;
@@ -207,23 +202,22 @@ body {
 }
 
 .designs-inspiradores__title-line {
-    font-size: 4.5rem; /* Yo aumenté el tamaño del título un 30% (de 3.5rem a 4.5rem) en celulares */
+    font-size: 4.5rem; 
     color: #ffffff;
     line-height: 0.85;
     margin: 0;
     font-weight: 100;
 }
 
-/* Yo ajusté la posición para que "MODERNOS" se sobreponga al final del título */
 .designs-inspiradores__badge-modernos {
     position: absolute;
     background-color: #f1d612;
-    color: #5A5E76; /* Yo cambié el color a gris-azul como en desktop */
-    font-size: 1.8rem; /* Yo aumenté el tamaño un 30% (de 1.4rem a 1.8rem) en celulares */
+    color: #5A5E76; 
+    font-size: 1.8rem; 
     line-height: 1;
     padding: 1px 4px;
     transform: rotate(-7deg);
-    right: 95px; /* Yo aumenté el desfase un 30% (de 50px a 65px) para que calce proporcional */
+    right: 95px; 
     top: 35%;
     font-weight: bold;
     display: inline-block;
@@ -232,8 +226,8 @@ body {
 
 .designs-inspiradores__badge-identity {
     background-color: #f1d612;
-    color: #5A5E76; /* Yo cambié el color a gris-azul como en computador */
-    font-size: 1.7rem; /* Yo aumenté el tamaño un 30% (de 1.3rem a 1.7rem) en celulares */
+    color: #5A5E76; 
+    font-size: 1.7rem; 
     line-height: 1;
     padding: 1px 4px;
     display: inline-block;
@@ -242,15 +236,13 @@ body {
     margin-top: -20px;
 }
 
-/* NUEVA ESTRUCTURA DE GRILLA PARA CONTROL DE ALTURAS EXACTO EN BODEGONES */
 .designs-inspiradores__grid {
     display: grid;
-    grid-template-columns: 7fr 5fr; /* Proporción 7/5 exacta */
-    grid-template-rows: 1fr 1fr;    /* Dos filas de igual alto */
-    /* Yo reduje el espacio horizontal de las columnas a solo 4px en celular para apretarlos */
+    grid-template-columns: 7fr 5fr; 
+    grid-template-rows: 1fr 1fr;    
     gap: 10px 4px;                     
     width: 100%;
-    max-width: 450px; /* Yo bajé el ancho máximo de 550px a 450px para compactar el bodegón */
+    max-width: 450px; 
     margin: 0 auto;
 }
 
@@ -267,14 +259,12 @@ body {
     text-decoration: none;
 }
 
-/* Yo pegué el libro verde hacia el extremo derecho de su columna para pegarlo a los otros */
 .designs-inspiradores__book-link--main {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     justify-content: flex-end;
 }
 
-/* Yo alineé el libro gris al tope superior y lo pegué hacia el borde izquierdo de su columna */
 .designs-inspiradores__book-link--sec-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -282,7 +272,6 @@ body {
     justify-content: flex-start;
 }
 
-/* Yo alineé el libro rosado a la base inferior y lo pegué hacia el borde izquierdo de su columna */
 .designs-inspiradores__book-link--sec-2 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -305,9 +294,70 @@ body {
     display: block;
 }
 
-/* SECCIÓN FLUJO DE TRABAJO (Mobile First) */
+/* ==========================================
+   ESTILOS ESPECÍFICOS DEL SLIDER BEM (MÓVIL)
+   ========================================== */
+
+/* Yo configuré los indicadores para que queden flotando de forma ordenada al final del slider */
+.designs-inspiradores__indicators {
+    bottom: 0px;
+    margin-bottom: 0;
+    display: none;
+}
+
+/* Yo transformé las barras por defecto de Bootstrap en pequeños círculos planos y elegantes */
+.designs-inspiradores__indicator {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: #55596b !important;
+    border: none !important;
+    opacity: 0.4 !important;
+    transition: opacity 0.3s ease, background-color 0.3s ease !important;
+    margin: 0 5px !important;
+}
+
+/* Yo apliqué el amarillo corporativo para destacar el punto activo de la navegación */
+.designs-inspiradores__indicator.active {
+    background-color: #f1d612 !important;
+    opacity: 1 !important;
+}
+
+/* Yo ajusté el ancho de las zonas táctiles de las flechas para evitar que se superpongan con el contenido */
+.designs-inspiradores__control {
+    width: 6%;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.designs-inspiradores__control:hover {
+    opacity: 1;
+}
+
+/* Yo unifiqué el alto mínimo en celulares para que el fondo gris no salte en pantallas móviles */
+.designs-inspiradores__slide {
+    padding-bottom: 40px;
+    min-height: 460px; 
+}
+
+/* Yo configuré la imagen única del segundo slide para que mantenga proporciones fluidas y ordenadas */
+.designs-inspiradores__book-single {
+    width: 100%;
+    height: auto;
+    max-width: 420px; 
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Yo apliqué una pequeña animación de escala al pasar el cursor sobre la imagen única */
+.designs-inspiradores__book-link--single:hover .designs-inspiradores__book-single {
+    transform: scale(1.03);
+}
+
+/* SECCIÓN FLUJO DE TRABAJO */
 .flujo-trabajo {
-    background-color: #ffffff; /* Fondo blanco puro solicitado */
+    background-color: #ffffff; 
     padding: 40px 0;
 }
 
@@ -322,7 +372,7 @@ body {
 }
 
 .flujo-trabajo__title-line {
-    font-size: 4.5rem; /* Tamaño proporcional para celulares */
+    font-size: 4.5rem; 
     color: #1a2656;
     line-height: 0.85;
     margin: 0;
@@ -330,7 +380,6 @@ body {
     font-family: 'Bebas Neue', cursive;
 }
 
-/* Yo posicioné la caja inclinada de forma absoluta tal como en la sección anterior */
 .flujo-trabajo__badge-zocalo {
     position: absolute;
     background-color: #f1d612;
@@ -338,7 +387,7 @@ body {
     font-size: 1.8rem; 
     padding: 1px 4px;
     transform: rotate(-7deg);
-    right: 40px; /* Desfase exacto al final del CÓMO en móvil */
+    right: 40px; 
     top: 25%;
     font-weight: bold;
     display: inline-block;
@@ -366,7 +415,7 @@ body {
     text-decoration: underline;
     font-size: 1.1rem;
     display: inline-block;
-    margin-bottom: 40px; /* Espacio antes de que empiecen los pasos en el celu */
+    margin-bottom: 40px; 
     transition: color 0.3s ease;
 }
 
@@ -379,18 +428,16 @@ body {
     margin-top: 20px;
 }
 
-/* Estructura del Paso Individual */
 .flujo-trabajo__step {
     display: flex;
     align-items: flex-start;
 }
 
-/* Yo creé el círculo amarillo plano para alojar el número del paso */
 .flujo-trabajo__step-number-box {
     width: 40px;
     height: 40px;
     background-color: #f1d612;
-    border-radius: 50%; /* Genera el círculo perfecto sin bordes */
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,7 +473,6 @@ body {
     margin: 0 0 5px 0;
 }
 
-/* Yo usé un tono amarillo un poco más oscuro (#d4b300) para garantizar legibilidad en fondo blanco puro */
 .flujo-trabajo__step-highlight {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: italic;
@@ -437,11 +483,11 @@ body {
     margin: 0;
 }
 
-/* SECCIÓN PRECIOS (Mobile First) */
+/* SECCIÓN PRECIOS */
 .precios {
-    background-color: #F0F0F0; /* Yo mantengo la sección transparente y plana sobre el fondo blanco para cumplir de forma estricta con la regla de limpieza absoluta de nuestro diseño */
+    background-color: #F0F0F0; 
     padding: 60px 0;
-    margin-top: 20px; /* Yo corregí el error de escritura de la barra vertical */
+    margin-top: 20px; 
 }
 
 .precios__title {
@@ -459,7 +505,6 @@ body {
     line-height: 1.4;
 }
 
-/* Yo usé tu amarillo corporativo para destacar el texto de forma plana */
 .precios__highlight {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
@@ -512,13 +557,12 @@ body {
     line-height: 1.2;
 }
 
-/* Yo diseñé el botón ovalado en píldora con rollover inverso al pasar el mouse */
 .precios__button {
     font-family: 'Bebas Neue', cursive;
     color: #1a2656;
     background-color: transparent;
     border: 2px solid #1a2656;
-    border-radius: 30px; /* Ovalado */
+    border-radius: 30px; 
     padding: 10px 20px;
     font-size: 1.4rem;
     text-align: center;
@@ -562,7 +606,7 @@ body {
 .precios__preview-link {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    color: #0089ff; /* Celeste */
+    color: #0089ff; 
     text-decoration: underline;
     font-size: 1.05rem;
     display: inline-block;
@@ -582,30 +626,29 @@ body {
     line-height: 1.4;
 }
 
-/* SECCIÓN PREGUNTAS FRECUENTES (Mobile First) */
+/* SECCIÓN PREGUNTAS FRECUENTES */
 .faq {
-    background-color: #ffffff; /* Fondo blanco puro */
+    background-color: #ffffff; 
     padding: 60px 0;
 }
 
 .faq__title {
     font-family: 'Bebas Neue', cursive;
     color: #1a2656;
-    font-size: 3rem; /* Tamaño solicitado en celulares */
+    font-size: 3rem; 
     line-height: 0.9;
     margin-bottom: 25px;
 }
 
 .faq__accordion {
     width: 100%;
-    border-top: 1px solid #eeeeee; /* Línea divisoria superior del acordeón plano */
+    border-top: 1px solid #eeeeee; 
 }
 
 .faq__item {
-    border-bottom: 1px solid #eeeeee; /* Línea divisoria inferior para cada ítem */
+    border-bottom: 1px solid #eeeeee; 
 }
 
-/* Yo configuré la cabecera interactiva plana sin bordes ni fondos toscos */
 .faq__header {
     width: 100%;
     background-color: transparent;
@@ -625,7 +668,7 @@ body {
 
 .faq__question {
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700; /* Letras en negrita */
+    font-weight: 700; 
     color: #1a2656;
     font-size: 1.1rem;
     line-height: 1.3;
@@ -652,16 +695,15 @@ body {
     font-weight: 700;
 }
 
-/* Yo diseñé el botón de contacto centrado al final del acordeón */
 .faq__button {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: #ffffff;
     background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);
     border: none;
-    border-radius: 6px; /* Esquinas suavemente redondeadas según tu maqueta */
+    border-radius: 6px; 
     padding: 12px 30px;
-    font-size: 0.9rem; /* Yo lo cambié a 0.9rem en celular para que combine perfectamente con el Hero */
+    font-size: 0.9rem; 
     display: inline-block;
     transition: transform 0.3s ease;
 }
@@ -673,7 +715,9 @@ body {
     transform: scale(1.05);
 }
 
-/* MEDIA QUERIES (Ajustes para Desktop - Pantallas desde 768px hacia arriba) */
+/* ==========================================
+   MEDIA QUERIES (VISTA DESKTOP - DESDE 768px)
+   ========================================== */
 @media (min-width: 768px) {
     .hero__overlay {
         padding-top: 8vh;
@@ -716,26 +760,12 @@ body {
         margin-top: 0;
     }
 
-    /* Yo moví el margen negativo aquí para que afecte única y exclusivamente al computador */
-    .designs-inspiradores__text-group {
-        margin-top: -180px;
-        align-items: flex-start; /* Reseteado para que se alinee a la izquierda en computador */
-        text-align: left;        /* Reseteado para que los textos fluyan a la izquierda */
-        margin-left: 0;
-        margin-right: 0;
-        width: auto;
-    }
-
-    /* Ajustes específicos del bloque de Diseños Inspiradores en Computador */
     .designs-inspiradores {
-        /* Yo mantengo el degradado de color gris-azul un 30% (de 75% a 52.5%) */
         background: linear-gradient(to bottom, #55596b 65%, #ffffff 52.5%);
-        /* Yo cambié el padding de 60px a 40px arriba para subir el grupo de texto de la barra gris */
         padding-top: 40px; 
         padding-bottom: 60px;
     }
 
-    /* Yo reduje las fuentes para que queden perfectas y ordenadas */
     .designs-inspiradores__badge-style {
         font-size: 2.2rem;
         line-height: 1;
@@ -751,7 +781,7 @@ body {
 
     .designs-inspiradores__badge-modernos {
         font-size: 2.5rem; 
-        right: 84px; /* Empujado hacia afuera para evitar sobrelapados toscos */
+        right: 84px; 
         top: 35%;
         padding: 0px 2px;
         line-height: 1;
@@ -767,25 +797,73 @@ body {
         color: #5A5E76;
     }
 
-    /* Yo reduje el ancho máximo a 450px y acorté el gap horizontal a solo 6px en computador */
     .designs-inspiradores__grid {
         gap: 15px 6px;
         max-width: 450px;
     }
 
-    /* AJUSTES DE LA SECCIÓN FLUJO DE TRABAJO EN COMPUTADOR */
+    /* ==========================================
+       AJUSTES ESPECÍFICOS DEL SLIDER BEM (DESKTOP)
+       ========================================== */
+    .designs-inspiradores__indicators {
+        bottom: 15px;
+    }
+
+    .designs-inspiradores__control {
+        width: 4%;
+    }
+
+    /* Yo configuré el inicio del bloque de textos con un margen positivo estable para que nunca se desplace */
+    .designs-inspiradores__text-group {
+        margin-top: -180px; 
+        align-items: flex-start; 
+        text-align: left;        
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+
+        .designs-inspiradores__text-group2 {
+        margin-top: -4px; 
+        align-items: flex-start; 
+        text-align: left;        
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+
+    /* Yo fijé el alto del slide y forcé que la fila se alinee desde el tope en desktop */
+    .designs-inspiradores__slide {
+        padding-bottom: 60px;
+        height: 420px; 
+        min-height: auto; 
+    }
+
+    .designs-inspiradores__slide .row {
+        height: 100%;
+        align-items: flex-start; 
+    }
+
+    /* Yo configuré la visualización de la imagen única para que calce proporcionalmente al lado del texto */
+    .designs-inspiradores__book-single {
+        max-width: 480px; 
+        margin-left: 30px; 
+        margin-top: -30px; 
+    }
+
+    /* SECCIÓN FLUJO DE TRABAJO */
     .flujo-trabajo {
-        margin-top:-120px;
+        margin-top: -120px;
         padding: 0px 0;
     }
 
     .flujo-trabajo__title-line {
-        font-size: 5.8rem; /* Tamaño idéntico al título de Diseños Inspiradores en desktop */
+        font-size: 5.8rem; 
     }
 
     .flujo-trabajo__badge-zocalo {
         font-size: 2.3rem;
-        right: 80px; /* Desfase calibrado para encajar a la perfección al lado de CÓMO */
+        right: 80px; 
         top: 28%;
         padding: 2px 2px;
     }
@@ -797,11 +875,11 @@ body {
 
     .flujo-trabajo__link {
         font-size: 1.2rem;
-        margin-bottom: 0px; /* Quitamos el margen en computador porque la fila tiene su propio margen superior */
+        margin-bottom: 0px; 
     }
 
     .flujo-trabajo__steps-row {
-        margin-top: 50px; /* Separación amplia y limpia entre el título y el grid de pasos */
+        margin-top: 50px; 
     }
 
     .flujo-trabajo__step-number-box {
@@ -826,7 +904,7 @@ body {
         font-size: 1.1rem;
     }
 
-    /* AJUSTES DE LA SECCIÓN PRECIOS EN COMPUTADOR */
+    /* SECCIÓN PRECIOS */
     .precios {
         padding: 80px 0;
         margin-top: 100px;
@@ -846,7 +924,7 @@ body {
 
     .precios__plan-desc {
         font-size: 1.1rem;
-        min-height: 75px; /* Yo forcé un alto mínimo para que todas las descripciones queden perfectamente alineadas */
+        min-height: 75px; 
     }
 
     .precios__price {
@@ -861,13 +939,13 @@ body {
         padding: 15px 20px;
     }
 
-    /* AJUSTES DE LA SECCIÓN PREGUNTAS FRECUENTES EN COMPUTADOR */
+    /* SECCIÓN FAQ */
     .faq {
         padding: 80px 0;
     }
 
     .faq__title {
-        font-size: 4.5rem; /* Tamaño solicitado en desktop */
+        font-size: 4.5rem; 
         margin-bottom: 40px;
     }
 
@@ -883,7 +961,6 @@ body {
         font-size: 1.1rem;
     }
 
-    /* Yo agregué esta regla aquí para que el botón de la FAQ suba a 1rem en computador, igualando al Hero */
     .faq__button {
         font-size: 1rem;
     }
