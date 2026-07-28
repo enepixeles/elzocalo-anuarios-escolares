@@ -1,0 +1,1461 @@
+<!-- 1. ESTILOS PERSONALIZADOS DE TU LANDING -->
+<style>
+	/* Yo configuré la base limpia con fondo blanco puro y tipografía Bebas Neue */
+	
+	* {
+		box-sizing: border-box;
+	}
+
+    /* Quitar el margen blanco (padding) que Bsale agrega por defecto en el contenedor principal */
+    body .bs-main {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+	
+    /* Ocultar el botón global de WhatsApp solo en esta landing page */
+    .chat-widget {
+        display: none !important;
+    }
+
+	/* Corregido: Ya no alteramos la etiqueta body global, sino únicamente el contenedor de la landing */
+	.landing-anuarios {
+		background-color: #ffffff;
+		font-family: 'Bebas Neue', cursive;
+		color: #1a1a1a;
+	}
+	
+	/* Título de registro (discreto al inicio de la página) */
+	
+	.main-title {
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		color: #cccccc;
+		text-align: center;
+		margin: 10px 0;
+		font-family: 'Bebas Neue', cursive;
+	}
+	/* UTILIDADES */
+	
+	.text-yellow {
+		color: #f1d612 !important;
+	}
+	/* SECCIÓN HERO (Diseño para celular por defecto) */
+	
+	.hero {
+		/* URL de Bsale integrada para el fondo */
+		background-image: url('https://dojiw2m9tvv09.cloudfront.net/76574/1/hero-clean-anuarios-escolares.webp?t=1785251126');
+		background-size: cover;
+		background-position: center;
+		height: 85vh;
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+	}
+	
+	.hero__overlay {
+		width: 100%;
+		padding-top: 5vh;
+	}
+	
+	.hero__subtitle-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 5px;
+	}
+	
+	/* Corregido: Agregamos line-height y font-size para que el espacio invisible no deforme la línea */
+	.hero__line {
+		height: 4px;
+		width: 40px;
+		background-color: #1a2656;
+		line-height: 0;
+		font-size: 0;
+		display: inline-block;
+	}
+	
+	.hero__subtitle {
+		font-size: 0.81rem;
+		/* Yo disminuí de 0.9rem a 0.81rem */
+		letter-spacing: 0px;
+		margin: 0;
+		color: #1a2656;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 900;
+	}
+	
+	.hero__heading {
+		color: #1a2656;
+		font-size: 3.6rem;
+		/* Yo disminuí de 4rem a 3.6rem */
+		font-weight: 600;
+		letter-spacing: 0px;
+		margin: 5px 0;
+		line-height: 0.9;
+	}
+	
+	.hero__description {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		color: #1a2656;
+		max-width: 90%;
+		margin: 10px auto 20px;
+		font-weight: 400;
+	}
+	
+	.hero__highlight {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		background-color: transparent;
+		padding: 0 5px;
+		color: #1a2656;
+	}
+	
+	.hero__button {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 700;
+		background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);
+		color: #ffffff;
+		padding: 10px 25px;
+		border-radius: 8px;
+		border: none;
+		text-transform: none;
+		transition: transform 0.3s ease;
+	}
+	
+	.hero__button:hover {
+		transform: scale(1.05);
+		text-decoration: none !important;
+		color: #ffffff;
+	}
+	/* BARRA DE CONTACTO */
+	
+	.contact-bar {
+		background-color: #242526;
+		color: #ffffff;
+		padding: 30px 0;
+	}
+	
+	.contact-bar__price-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		line-height: 1;
+	}
+	
+	.contact-bar__text-top {
+		font-size: 2.07rem;
+		/* Yo disminuí de 2.3rem a 2.07rem */
+		color: #ffffff;
+		margin-bottom: 5px;
+		line-height: 1rem;
+	}
+	
+	.contact-bar__text-bottom {
+		font-size: 2.07rem;
+		/* Yo disminuí de 2.3rem a 2.07rem */
+		background-color: #f1d612;
+		color: #000000;
+		padding: 1px 2px;
+		display: block;
+		box-sizing: border-box;
+	}
+	
+	.contact-bar__info {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 0.99rem;
+		/* Yo disminuí de 1.1rem a 0.99rem */
+		line-height: 1.2;
+		margin: 15px 0;
+		color: #ffffff;
+	}
+	
+	.contact-bar__whatsapp {
+		font-family: 'Bebas Neue', cursive;
+		background-color: #ffffff;
+		color: #242526;
+		padding: 4px 20px;
+		display: inline-block;
+		text-decoration: none;
+		font-size: 0.99rem;
+		/* Yo disminuí de 1.1rem a 0.99rem */
+		line-height: 1.1;
+		text-align: center;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+	
+	.contact-bar__whatsapp:hover {
+		background-color: #0089ff;
+		color: #ffffff;
+		text-decoration: none;
+	}
+	/* SECCIÓN DISEÑOS INSPIRADORES */
+	
+	.designs-inspiradores {
+		background: linear-gradient(to bottom, #55596b 65%, #ffffff 65%);
+		padding: 40px 0;
+	}
+	
+	.designs-inspiradores__text-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: fit-content;
+	}
+	
+	.designs-inspiradores__badge-style {
+		background-color: #f1d612;
+		color: #5A5E76;
+		font-size: 1.53rem;
+		/* Yo disminuí de 1.7rem a 1.53rem */
+		line-height: 1;
+		padding: 1px 4px;
+		display: inline-block;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin-bottom: 4px;
+	}
+	
+	.designs-inspiradores__title-wrap {
+		position: relative;
+		display: block;
+		margin-bottom: 15px;
+	}
+	
+	.designs-inspiradores__title-line {
+		font-size: 4.05rem;
+		/* Yo disminuí de 4.5rem a 4.05rem */
+		color: #ffffff;
+		line-height: 0.85;
+		margin: 0;
+		font-weight: 100;
+	}
+	
+	.designs-inspiradores__badge-modernos {
+		position: absolute;
+		background-color: #f1d612;
+		color: #5A5E76;
+		font-size: 1.62rem;
+		/* Yo disminuí de 1.8rem a 1.62rem */
+		line-height: 1;
+		padding: 1px 4px;
+		transform: rotate(-7deg);
+		right: 95px;
+		top: 35%;
+		font-weight: bold;
+		display: inline-block;
+		letter-spacing: 1px;
+	}
+	
+	.designs-inspiradores__badge-identity {
+		background-color: #f1d612;
+		color: #5A5E76;
+		font-size: 1.53rem;
+		/* Yo disminuí de 1.7rem a 1.53rem */
+		line-height: 1;
+		padding: 1px 4px;
+		display: inline-block;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin-top: -20px;
+	}
+	
+	.designs-inspiradores__grid {
+		display: grid;
+		grid-template-columns: 7fr 5fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 10px 4px;
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+	
+	.designs-inspiradores__book-link {
+		display: flex;
+		text-decoration: none;
+		transition: transform 0.3s ease;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.designs-inspiradores__book-link:hover {
+		transform: scale(1.03);
+		text-decoration: none;
+	}
+	
+	.designs-inspiradores__book-link--main {
+		grid-column: 1 / 2;
+		grid-row: 1 / 3;
+		justify-content: flex-end;
+	}
+	
+	.designs-inspiradores__book-link--sec-1 {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	
+	.designs-inspiradores__book-link--sec-2 {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+	
+	.designs-inspiradores__book-main {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin-left: 25px;
+	}
+	
+	.designs-inspiradores__book-secondary {
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+		display: block;
+	}
+	/* ESTILOS ESPECÍFICOS DEL SLIDER BEM (MÓVIL) */
+	
+	.designs-inspiradores__indicators {
+		bottom: 0px;
+		margin-bottom: 0;
+		display: none;
+	}
+	
+	.designs-inspiradores__indicator {
+		width: 10px !important;
+		height: 10px !important;
+		border-radius: 50% !important;
+		background-color: #55596b !important;
+		border: none !important;
+		opacity: 0.4 !important;
+		transition: opacity 0.3s ease, background-color 0.3s ease !important;
+		margin: 0 5px !important;
+	}
+	
+	.designs-inspiradores__indicator.active {
+		background-color: #f1d612 !important;
+		opacity: 1 !important;
+	}
+	
+	.designs-inspiradores__control {
+		width: 6%;
+		opacity: 0.6;
+		transition: opacity 0.3s ease;
+	}
+	
+	.designs-inspiradores__control:hover {
+		opacity: 1;
+	}
+	
+	.designs-inspiradores__slide {
+		padding-bottom: 40px;
+		min-height: 460px;
+	}
+	
+	.designs-inspiradores__book-single {
+		width: 100%;
+		height: auto;
+		max-width: 420px;
+		display: block;
+		margin: 0 auto;
+		transition: transform 0.3s ease;
+	}
+	
+	.designs-inspiradores__book-link--single:hover .designs-inspiradores__book-single {
+		transform: scale(1.03);
+	}
+	
+	/* Corregido: Evitamos que el espacio en blanco del slider ensanche o muestre texto residual */
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		font-size: 0;
+		color: transparent;
+	}
+	
+	/* SECCIÓN FLUJO DE TRABAJO */
+	
+	.flujo-trabajo {
+		background-color: #ffffff;
+		padding: 40px 0;
+	}
+	
+	.flujo-trabajo__header {
+		text-align: left;
+	}
+	
+	.flujo-trabajo__title-wrap {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+	
+	.flujo-trabajo__title-line {
+		font-size: 4.05rem;
+		/* Yo disminuí de 4.5rem a 4.05rem */
+		color: #1a2656;
+		line-height: 0.85;
+		margin: 0;
+		font-weight: 100;
+		font-family: 'Bebas Neue', cursive;
+	}
+	
+	.flujo-trabajo__badge-zocalo {
+		position: absolute;
+		background-color: #f1d612;
+		color: #1a2656;
+		font-size: 1.62rem;
+		/* Yo disminuí de 1.8rem a 1.62rem */
+		padding: 1px 4px;
+		transform: rotate(-7deg);
+		right: 40px;
+		top: 25%;
+		font-weight: bold;
+		display: inline-block;
+		letter-spacing: 1px;
+		line-height: 1;
+	}
+	
+	.flujo-trabajo__description {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 0.99rem;
+		/* Yo disminuí de 1.1rem a 0.99rem */
+		color: #1A2656;
+		line-height: 1.4;
+		margin-bottom: 15px;
+	}
+	
+	.flujo-trabajo__description strong {
+		color: #1A2656;
+		font-weight: 700;
+	}
+	
+	.flujo-trabajo__link {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		color: #0089ff;
+		text-decoration: underline;
+		font-size: 0.99rem;
+		/* Yo disminuí de 1.1rem a 0.99rem */
+		display: inline-block;
+		margin-bottom: 40px;
+		transition: color 0.3s ease;
+	}
+	
+	.flujo-trabajo__link:hover {
+		color: #28469e;
+		text-decoration: underline;
+	}
+	
+	.flujo-trabajo__steps-row {
+		margin-top: 20px;
+	}
+	
+	.flujo-trabajo__step {
+		display: flex;
+		align-items: flex-start;
+	}
+	
+	.flujo-trabajo__step-number-box {
+		width: 40px;
+		height: 40px;
+		background-color: #f1d612;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		margin-right: 15px;
+	}
+	
+	.flujo-trabajo__step-number {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 1.62rem;
+		/* Yo disminuí de 1.8rem a 1.62rem */
+		line-height: 1;
+	}
+	
+	.flujo-trabajo__step-content {
+		flex-grow: 1;
+	}
+	
+	.flujo-trabajo__step-title {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 1.62rem;
+		/* Yo disminuí de 1.8rem a 1.62rem */
+		line-height: 1;
+		margin: 0 0 5px 0;
+	}
+	
+	.flujo-trabajo__step-desc {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-style: italic;
+		color: #1A2656;
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		line-height: 1.3;
+		margin: 0 0 5px 0;
+	}
+	
+	.flujo-trabajo__step-highlight {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-style: italic;
+		font-weight: 700;
+		color: #EBCF00;
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		line-height: 1.3;
+		margin: 0;
+	}
+	/* SECCIÓN PRECIOS */
+	
+	.precios {
+		background-color: #F0F0F0;
+		padding: 60px 0;
+		margin-top: 20px;
+	}
+	
+	.precios__title {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 2.7rem;
+		/* Yo disminuí de 3rem a 2.7rem */
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+	
+	.precios__subtitle {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 1.08rem;
+		/* Yo disminuí de 1.2rem a 1.08rem */
+		color: #1a2656;
+		line-height: 1.4;
+	}
+	
+	.precios__highlight {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		background-color: #EBCF00;
+		color: #1a2656;
+		padding: 0 4px;
+	}
+	
+	.precios__column {
+		display: flex;
+		flex-direction: column;
+		padding: 15px 10px;
+		background-color: #fff;
+		border-radius: 12px;
+	}
+	
+	.precios__plan-title {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 1.98rem;
+		/* Yo disminuí de 2.2rem a 1.98rem */
+		line-height: 1;
+		margin-bottom: 10px;
+	}
+	
+	.precios__plan-desc {
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #555555;
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		line-height: 1.4;
+	}
+	
+	.precios__price-container {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin: 20px 0;
+	}
+	
+	.precios__price {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 3.15rem;
+		/* Yo disminuí de 3.5rem a 3.15rem */
+		line-height: 1;
+	}
+	
+	.precios__price-info {
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #555555;
+		font-size: 0.765rem;
+		/* Yo disminuí de 0.85rem a 0.765rem */
+		line-height: 1.2;
+	}
+	
+	.precios__button {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		background-color: transparent;
+		border: 2px solid #1a2656;
+		border-radius: 30px;
+		padding: 10px 20px;
+		font-size: 1.26rem;
+		/* Yo disminuí de 1.4rem a 1.26rem */
+		text-align: center;
+		width: 100%;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+	
+	.precios__button:hover {
+		background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);
+		border: 2px solid transparent;
+		color: #ffffff;
+	}
+	
+	.precios__divider {
+		border: none;
+		border-top: 1px solid #eeeeee;
+		margin: 25px 0;
+	}
+	
+	.precios__features-title {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 1.35rem;
+		/* Yo disminuí de 1.5rem a 1.35rem */
+		margin-bottom: 15px;
+		line-height: 1;
+	}
+	
+	.precios__feature {
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #555555;
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		line-height: 1.4;
+		margin-bottom: 12px;
+	}
+	
+	.precios__feature strong {
+		color: #1a2656;
+		font-weight: 700;
+	}
+	
+	.precios__preview-link {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		color: #0089ff;
+		text-decoration: underline;
+		font-size: 0.945rem;
+		/* Yo disminuí de 1.05rem a 0.945rem */
+		display: inline-block;
+		margin-top: 15px;
+		transition: color 0.3s ease;
+	}
+	
+	.precios__preview-link:hover {
+		color: #28469e;
+	}
+	
+	.precios__footnote {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-style: italic;
+		color: #888888;
+		font-size: 0.81rem;
+		/* Yo disminuí de 0.9rem a 0.81rem */
+		line-height: 1.4;
+	}
+	/* SECCIÓN PREGUNTAS FRECUENTES */
+	
+	.faq {
+		background-color: #ffffff;
+		padding: 60px 0;
+	}
+	
+	.faq__title {
+		font-family: 'Bebas Neue', cursive;
+		color: #1a2656;
+		font-size: 2.7rem;
+		/* Yo disminuí de 3rem a 2.7rem */
+		line-height: 0.9;
+		margin-bottom: 25px;
+	}
+	
+	.faq__accordion {
+		width: 100%;
+		border-top: 1px solid #eeeeee;
+	}
+	
+	.faq__item {
+		border-bottom: 1px solid #eeeeee;
+	}
+	
+	.faq__header {
+		width: 100%;
+		background-color: transparent;
+		border: none;
+		padding: 20px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: left;
+		outline: none;
+		cursor: pointer;
+	}
+	
+	.faq__header:focus {
+		outline: none;
+	}
+	
+	.faq__question {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+		color: #1a2656;
+		font-size: 0.99rem;
+		/* Yo disminuí de 1.1rem a 0.99rem */
+		line-height: 1.3;
+	}
+	
+	.faq__icon {
+		font-family: 'Roboto Light', sans-serif;
+		font-size: 1.35rem;
+		/* Yo disminuí de 1.5rem a 1.35rem */
+		color: #1a2656;
+		margin-left: 15px;
+		flex-shrink: 0;
+	}
+	
+	.faq__body {
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #555555;
+		font-size: 0.9rem;
+		/* Yo disminuí de 1rem a 0.9rem */
+		line-height: 1.4;
+		padding-bottom: 20px;
+	}
+	
+	.faq__body strong {
+		color: #1a2656;
+		font-weight: 700;
+	}
+	
+	.faq__button {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 700;
+		color: #ffffff;
+		background: linear-gradient(90deg, #2448a3 0%, #9a08f5 100%);
+		border: none;
+		border-radius: 6px;
+		padding: 12px 30px;
+		font-size: 0.81rem;
+		/* Yo disminuí de 0.9rem a 0.81rem */
+		display: inline-block;
+		transition: transform 0.3s ease;
+	}
+	
+	.faq__button:hover {
+		background-color: #0089ff;
+		color: #ffffff;
+		text-decoration: none;
+		transform: scale(1.05);
+	}
+	/* MEDIA QUERIES (VISTA DESKTOP - DESDE 768px) */
+	
+	@media (min-width: 768px) {
+		.hero__overlay {
+			padding-top: 8vh;
+		}
+		.hero__line {
+			width: 120px;
+		}
+		.hero__subtitle {
+			font-size: 1.08rem;
+			/* Yo disminuí de 1.2rem a 1.08rem */
+			letter-spacing: 10px;
+		}
+		.hero__heading {
+			font-size: 7.2rem;
+			/* Yo disminuí de 8rem a 7.2rem */
+		}
+		.hero__description {
+			font-size: 1.08rem;
+			/* Yo disminuí de 1.2rem a 1.08rem */
+			max-width: 800px;
+		}
+		.hero__button {
+			font-size: 0.9rem;
+			/* Yo disminuí de 1rem a 0.9rem */
+			padding: 12px 14px;
+		}
+		.contact-bar__price-box {
+			align-items: flex-start;
+			text-align: left;
+		}
+		.contact-bar__info {
+			font-size: 1.08rem;
+			/* Yo disminuí de 1.2rem a 1.08rem */
+			margin: 0;
+		}
+		.contact-bar__whatsapp {
+			margin-top: 0;
+		}
+		.designs-inspiradores {
+			background: linear-gradient(to bottom, #55596b 65%, #ffffff 52.5%);
+			padding-top: 40px;
+			padding-bottom: 60px;
+		}
+		.designs-inspiradores__badge-style {
+			font-size: 1.98rem;
+			/* Yo disminuí de 2.2rem a 1.98rem */
+			line-height: 1;
+			padding: 4px 2px;
+			margin-bottom: 0px;
+			color: #5A5E76;
+		}
+		.designs-inspiradores__title-line {
+			font-size: 5.22rem;
+			/* Yo disminuí de 5.8rem a 5.22rem */
+			font-weight: 100;
+		}
+		.designs-inspiradores__badge-modernos {
+			font-size: 2.25rem;
+			/* Yo disminuí de 2.5rem a 2.25rem */
+			right: 84px;
+			top: 35%;
+			padding: 0px 2px;
+			line-height: 1;
+			color: #5A5E76;
+			display: inline-block;
+		}
+		.designs-inspiradores__badge-identity {
+			font-size: 2.25rem;
+			/* Yo disminuí de 2.5rem a 2.25rem */
+			line-height: 1;
+			padding: 4px 2px;
+			margin-top: -20px;
+			color: #5A5E76;
+		}
+		.designs-inspiradores__grid {
+			gap: 15px 6px;
+			max-width: 450px;
+		}
+		/* AJUSTES ESPECÍFICOS DEL SLIDER BEM (DESKTOP) */
+		.designs-inspiradores__indicators {
+			bottom: 15px;
+		}
+		.designs-inspiradores__control {
+			width: 4%;
+		}
+		.designs-inspiradores__text-group {
+			margin-top: -180px;
+			align-items: flex-start;
+			text-align: left;
+			margin-left: 0;
+			margin-right: 0;
+			width: auto;
+		}
+		.designs-inspiradores__text-group2 {
+			margin-top: -4px;
+			align-items: flex-start;
+			text-align: left;
+			margin-left: 0;
+			margin-right: 0;
+			width: auto;
+		}
+		.designs-inspiradores__slide {
+			padding-bottom: 60px;
+			height: 420px;
+			min-height: auto;
+		}
+		.designs-inspiradores__slide .row {
+			height: 100%;
+			align-items: flex-start;
+		}
+		.designs-inspiradores__book-single {
+			max-width: 480px;
+			margin-left: 30px;
+			margin-top: -30px;
+		}
+		/* SECCIÓN FLUJO DE TRABAJO */
+		.flujo-trabajo {
+			margin-top: -120px;
+			padding: 0px 0;
+		}
+		.flujo-trabajo__title-line {
+			font-size: 5.22rem;
+			/* Yo disminuí de 5.8rem a 5.22rem */
+		}
+		.flujo-trabajo__badge-zocalo {
+			font-size: 2.07rem;
+			/* Yo disminuí de 2.3rem a 2.07rem */
+			right: 80px;
+			top: 28%;
+			padding: 2px 2px;
+		}
+		.flujo-trabajo__description {
+			font-size: 1.08rem;
+			/* Yo disminuí de 1.2rem a 1.08rem */
+			margin-bottom: 20px;
+		}
+		.flujo-trabajo__link {
+			font-size: 1.08rem;
+			/* Yo disminuí de 1.2rem a 1.08rem */
+			margin-bottom: 0px;
+		}
+		.flujo-trabajo__steps-row {
+			margin-top: 50px;
+		}
+		.flujo-trabajo__step-number-box {
+			width: 45px;
+			height: 45px;
+			margin-right: 20px;
+		}
+		.flujo-trabajo__step-number {
+			font-size: 1.8rem;
+			/* Yo disminuí de 2rem a 1.8rem */
+		}
+		.flujo-trabajo__step-title {
+			font-size: 1.98rem;
+			/* Yo disminuí de 2.2rem a 1.98rem */
+		}
+		.flujo-trabajo__step-desc {
+			font-size: 0.99rem;
+			/* Yo disminuí de 1.1rem a 0.99rem */
+		}
+		.flujo-trabajo__step-highlight {
+			font-size: 0.99rem;
+			/* Yo disminuí de 1.1rem a 0.99rem */
+		}
+		/* SECCIÓN PRECIOS */
+		.precios {
+			padding: 80px 0;
+			margin-top: 100px;
+		}
+		.precios__title {
+			font-size: 4.05rem;
+			/* Yo disminuí de 4.5rem a 4.05rem */
+		}
+		.precios__subtitle {
+			font-size: 1.08rem;
+			/* Yo disminuí de 1.2rem a 1.08rem */
+		}
+		.precios__plan-title {
+			font-size: 2.34rem;
+			/* Yo disminuí de 2.6rem a 2.34rem */
+		}
+		.precios__plan-desc {
+			font-size: 0.99rem;
+			/* Yo disminuí de 1.1rem a 0.99rem */
+			min-height: 75px;
+		}
+		.precios__price {
+			font-size: 4.05rem;
+			/* Yo disminuí de 4.5rem a 4.05rem */
+		}
+		.precios__price-info {
+			font-size: 0.81rem;
+			/* Yo disminuí de 0.9rem a 0.81rem */
+		}
+		.precios__column {
+			padding: 15px 20px;
+		}
+		/* SECCIÓN FAQ */
+		.faq {
+			padding: 80px 0;
+		}
+		.faq__title {
+			font-size: 4.05rem;
+			/* Yo disminuí de 4.5rem a 4.05rem */
+			margin-bottom: 40px;
+		}
+		.faq__question {
+			font-size: 1.17rem;
+			/* Yo disminuí de 1.3rem a 1.17rem */
+		}
+		.faq__icon {
+			font-size: 1.62rem;
+			/* Yo disminuí de 1.8rem a 1.62rem */
+		}
+		.faq__body {
+			font-size: 0.99rem;
+			/* Yo disminuí de 1.1rem a 0.99rem */
+		}
+		.faq__button {
+			font-size: 0.9rem;
+			/* Yo disminuí de 1rem a 0.9rem */
+		}
+	}
+
+</style>
+<!-- 2. ESTRUCTURA HTML DE LA LANDING -->
+<div class="landing-anuarios">
+	<!-- Sección Hero -->
+	<section class="hero">
+		<div class="hero__overlay">
+			<div class="container text-center">
+				<div class="hero__subtitle-container">
+					<span class="hero__line">&nbsp;</span>
+					<p class="hero__subtitle">SU HISTORIA MERECE SER ETERNA</p>
+					<span class="hero__line">&nbsp;</span>
+				</div>
+	
+				<h2 class="hero__heading">ANUARIOS ESCOLARES</h2>
+	
+				<p class="hero__description">Tendr&aacute;s recuerdos inolvidables este 2026. Conoce c&oacute;mo transformamos los momentos de tu comunidad en un libro <span class="hero__highlight">que durar&aacute; para siempre.</span></p>
+				<button class="btn hero__button">Ver opciones disponibles</button>
+			</div>
+		</div>
+	</section>
+	<!-- Barra de Contacto -->
+	<section class="contact-bar">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12 col-md-4 mb-3 mb-md-0">
+					<div class="contact-bar__price-box"><span class="contact-bar__text-top">OBT&Eacute;N PRECIOS</span>
+						<span class="contact-bar__text-bottom">PREFERENCIALES</span></div>
+				</div>
+				<div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
+	
+					<p class="contact-bar__info">AL POR MAYOR Y ASESOR&Iacute;A EN <span class="text-yellow">DISE&Ntilde;O PROPIO</span>
+						<br> DIRECTAMENTE CON UN EJECUTIVO</p>
+				</div>
+				<div class="col-12 col-md-4 text-center text-md-right"><a class="contact-bar__whatsapp" href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F"> CONTACTA CON NOSOTROS <br>POR WHATSAPP </a></div>
+			</div>
+		</div>
+	</section>
+	<!-- Sección Diseños Inspiradores (Slider) -->
+	<section class="designs-inspiradores carousel slide" data-interval="false" data-ride="carousel" id="designsCarousel">
+	
+		<ol class="carousel-indicators designs-inspiradores__indicators">
+			<li data-target="#designsCarousel" data-slide-to="0" class="active designs-inspiradores__indicator"></li>
+			<li data-target="#designsCarousel" data-slide-to="1" class="designs-inspiradores__indicator"></li>
+		</ol>
+		<div class="carousel-inner designs-inspiradores__slider">
+			<!-- Primer Slide (Diseño original) -->
+			<div class="carousel-item active designs-inspiradores__slide">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-12 col-md-6 mb-4 mb-md-0">
+							<div class="designs-inspiradores__text-group"><span class="designs-inspiradores__badge-style">CON ESTILO</span>
+								<div class="designs-inspiradores__title-wrap">
+	
+									<h2 class="designs-inspiradores__title-line">DISE&Ntilde;OS</h2>
+									<span class="designs-inspiradores__badge-modernos">MODERNOS</span>
+	
+									<h2 class="designs-inspiradores__title-line">INSPIRADORES</h2>
+								</div>
+								<span class="designs-inspiradores__badge-identity">TU DISE&Ntilde;O. TU IDENTIDAD</span></div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div class="row align-items-stretch">
+								<!-- Libro Grande -->
+								<div class="col-7">
+									<a class="designs-inspiradores__book-link" href="https://www.imprentaelzocalo.cl/product/anuario-escolar-tapa-dura-el-zocalo" target="_blank"> <img src="https://dojiw2m9tvv09.cloudfront.net/76574/1/disenos-inspirdores-01.webp?t=1785251126" alt="" class="designs-inspiradores__book-main"> </a>
+								</div>
+								<!-- Dos Libros Pequeños Stackeados -->
+								<div class="col-5">
+									<div class="designs-inspiradores__side-books">
+										<a class="designs-inspiradores__book-link" href="https://www.imprentaelzocalo.cl/product/anuario-escolar-hasta-120-paginas-el-zocalo" target="_blank"> <img src="https://dojiw2m9tvv09.cloudfront.net/76574/1/disenos-inspirdores-02.webp?t=1785251127" alt="" class="designs-inspiradores__book-secondary"> </a>
+										<a class="designs-inspiradores__book-link" href="https://www.imprentaelzocalo.cl/product/anuario-escolar-hasta-120-paginas-tapa-dura-espiral-el-zocalo" target="_blank"> <img src="https://dojiw2m9tvv09.cloudfront.net/76574/1/disenos-inspirdores-03.webp?t=1785251127" alt="" class="designs-inspiradores__book-secondary"> </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Segundo Slide -->
+			<div class="carousel-item designs-inspiradores__slide">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-12 col-md-6 mb-4 mb-md-0">
+							<div class="designs-inspiradores__text-group2"><span class="designs-inspiradores__badge-style">CON ESTILO</span>
+								<div class="designs-inspiradores__title-wrap">
+	
+									<h2 class="designs-inspiradores__title-line">DISE&Ntilde;OS</h2>
+									<span class="designs-inspiradores__badge-modernos">MODERNOS</span>
+	
+									<h2 class="designs-inspiradores__title-line">INSPIRADORES</h2>
+								</div>
+								<span class="designs-inspiradores__badge-identity">TU DISE&Ntilde;O. TU IDENTIDAD</span></div>
+						</div>
+						<div class="col-12 col-md-6 text-center text-md-left">
+							<a class="designs-inspiradores__book-link designs-inspiradores__book-link--single" href="https://www.imprentaelzocalo.cl/product/anuario-escolar-60-80-paginas-el-zocalo" target="_blank"> <img src="https://dojiw2m9tvv09.cloudfront.net/76574/1/DISEÑOS-INSPIRADORES-02.webp?t=1785251126" alt="Detalle interior de anuario" class="img-fluid designs-inspiradores__book-single"> </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Controles laterales -->
+		<a class="carousel-control-prev designs-inspiradores__control designs-inspiradores__control--prev" data-slide="prev" href="#designsCarousel">
+			<span class="carousel-control-prev-icon" aria-hidden="true">&nbsp;</span>
+			<span class="sr-only">Anterior</span>
+		</a>
+		<a class="carousel-control-next designs-inspiradores__control designs-inspiradores__control--next" data-slide="next" href="#designsCarousel">
+			<span class="carousel-control-next-icon" aria-hidden="true">&nbsp;</span>
+			<span class="sr-only">Siguiente</span>
+		</a>
+	</section>
+	<!-- Sección Flujo de Trabajo -->
+	<section class="flujo-trabajo">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-7">
+					<div class="flujo-trabajo__header">
+						<div class="flujo-trabajo__title-wrap">
+	
+							<h2 class="flujo-trabajo__title-line">C&Oacute;MO</h2>
+							<span class="flujo-trabajo__badge-zocalo">EN EL Z&Oacute;CALO</span>
+	
+							<h2 class="flujo-trabajo__title-line">TRABAJAMOS</h2>
+						</div>
+	
+						<p class="flujo-trabajo__description">Con un flujo que garantiza la <strong>entrega puntual</strong> de sus anuarios. Nos encargamos de la log&iacute;stica y el dise&ntilde;o para que usted pueda concentrarse en lo importante.</p>
+						<a class="flujo-trabajo__link" href="https://www.imprentaelzocalo.cl/policies/detalles-del-proceso-y-condiciones-anuarios-escolares" target="_blank">Detalles del proceso y condiciones</a></div>
+				</div>
+			</div>
+			<div class="row flujo-trabajo__steps-row">
+				<!-- Paso 1 -->
+				<div class="col-12 col-md-6 mb-5">
+					<div class="flujo-trabajo__step">
+						<div class="flujo-trabajo__step-number-box"><span class="flujo-trabajo__step-number">1</span></div>
+						<div class="flujo-trabajo__step-content">
+	
+							<h3 class="flujo-trabajo__step-title">COTIZACI&Oacute;N Y REQUERIMIENTOS</h3>
+	
+							<p class="flujo-trabajo__step-desc">Definimos alcances, cantidad, detalles t&eacute;cnicos.
+								<br>Toma 5 d&iacute;as h&aacute;biles.</p>
+	
+							<p class="flujo-trabajo__step-highlight">As&iacute; obtienes un presupuesto claro.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Paso 2 -->
+				<div class="col-12 col-md-6 mb-5">
+					<div class="flujo-trabajo__step">
+						<div class="flujo-trabajo__step-number-box"><span class="flujo-trabajo__step-number">2</span></div>
+						<div class="flujo-trabajo__step-content">
+	
+							<h3 class="flujo-trabajo__step-title">ENV&Iacute;O, RECEPCI&Oacute;N DE MATERIAL Y REVISI&Oacute;N DEL DISE&Ntilde;O</h3>
+	
+							<p class="flujo-trabajo__step-desc">Var&iacute;a según tu formato: 5 d&iacute;as h&aacute;biles si env&iacute;as el PDF listo, 15 d&iacute;as para recopilar material si usas plantilla, o hasta 30 d&iacute;as h&aacute;biles en el plan Premium College (producci&oacute;n fotogr&aacute;fica y dise&ntilde;o total).</p>
+	
+							<p class="flujo-trabajo__step-highlight">La identidad de tu instituci&oacute;n es lo m&aacute;s importante.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Paso 3 -->
+				<div class="col-12 col-md-6 mb-5 mb-md-0">
+					<div class="flujo-trabajo__step">
+						<div class="flujo-trabajo__step-number-box"><span class="flujo-trabajo__step-number">3</span></div>
+						<div class="flujo-trabajo__step-content">
+	
+							<h3 class="flujo-trabajo__step-title">ENV&Iacute;O Y REVISI&Oacute;N DE MAQUETA</h3>
+	
+							<p class="flujo-trabajo__step-desc">Enviamos una maqueta digital para validar el resultado final antes de imprimir.</p>
+	
+							<p class="flujo-trabajo__step-highlight">Aseguramos que el contenido sea el correcto.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Paso 4 -->
+				<div class="col-12 col-md-6">
+					<div class="flujo-trabajo__step">
+						<div class="flujo-trabajo__step-number-box"><span class="flujo-trabajo__step-number">4</span></div>
+						<div class="flujo-trabajo__step-content">
+	
+							<h3 class="flujo-trabajo__step-title">PRODUCCI&Oacute;N</h3>
+	
+							<p class="flujo-trabajo__step-desc">Una vez aprobada la maqueta y en tres semanas, iniciamos la impresi&oacute;n y terminaciones de tu anuario.</p>
+	
+							<p class="flujo-trabajo__step-highlight">Para que tus anuarios est&eacute;n listos para la ceremonia.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Sección Precios -->
+	<section class="precios" id="precios">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center mb-5">
+	
+					<h2 class="precios__title">TENEMOS SOLUCIONES A TU MEDIDA</h2>
+	
+					<p class="precios__subtitle">Calidad premium y asesor&iacute;a experta en cada formato. Descubre <span class="precios__highlight">la opci&oacute;n perfecta</span> para inmortalizar tu a&ntilde;o escolar.</p>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Plan Básico -->
+				<div class="col-12 col-md-4 mb-5 mb-md-0">
+					<div class="precios__column">
+	
+						<h3 class="precios__plan-title">B&Aacute;SICO</h3>
+	
+						<p class="precios__plan-desc">La alternativa m&aacute;s r&aacute;pida y econ&oacute;mica para plasmar los recuerdos clave de tu a&ntilde;o escolar.</p>
+						<div class="precios__price-container"><span class="precios__price">$14.990</span>
+							<span class="precios__price-info"> /IVA incluido, por unidad.<br> /tiraje de 30 unidades. </span></div>
+						<a class="btn precios__button" href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F">Conversa con un ejecutivo</a>
+						<hr class="precios__divider">
+						<div class="precios__features">
+	
+							<h4 class="precios__features-title">Incluye</h4>
+	
+							<p class="precios__feature"><strong>60-80 p&aacute;ginas full color en couch&eacute; 130g.</strong></p>
+	
+							<p class="precios__feature">Tapa emplacada en cart&oacute;n piedra de 2 mm con forro s&iacute;mil cuero (colores disponibles: negro, azul oscuro, verde y rojo).</p>
+	
+							<p class="precios__feature">Encuadernaci&oacute;n: Anillado con espiral met&aacute;lico recubierto continuo (colores disponibles: blanco, plata, azul, verde).</p>
+	
+							<p class="precios__feature">Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rinc&oacute;n de los Recuerdos / Mensaje del Director(a) / Hitos Importantes</p>
+	
+							<p class="precios__feature">Asesor&iacute;a Profesional.</p>
+							<a class="precios__preview-link" href="https://www.imprentaelzocalo.cl/product/anuario-escolar-60-80-paginas-el-zocalo" target="_blank">Previsualizar este anuario</a></div>
+					</div>
+				</div>
+				<!-- Plan Esencial -->
+				<div class="col-12 col-md-4 mb-5 mb-md-0">
+					<div class="precios__column">
+	
+						<h3 class="precios__plan-title">ESENCIAL</h3>
+	
+						<p class="precios__plan-desc">Para capturar los hitos m&aacute;s importantes de tu a&ntilde;o escolar en un formato &aacute;gil, elegante y f&aacute;cil de compartir.</p>
+						<div class="precios__price-container"><span class="precios__price">$29.990</span>
+							<span class="precios__price-info"> /IVA incluido, por unidad.<br> /tiraje de 30 unidades. </span></div>
+						<a class="btn precios__button" href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F">Conversa con un ejecutivo</a>
+						<hr class="precios__divider">
+						<div class="precios__features">
+	
+							<h4 class="precios__features-title">Incluye</h4>
+	
+							<p class="precios__feature"><strong> Hasta 120 p&aacute;ginas full color en couch&eacute; 130g.</strong></p>
+	
+							<p class="precios__feature"><strong>Tapa dura emplacada.</strong></p>
+	
+							<p class="precios__feature"><strong>Encuadernado cosido encolado.</strong></p>
+	
+							<p class="precios__feature">Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rinc&oacute;n de los Recuerdos / Mensaje del Director(a) / Hitos Importantes</p>
+	
+							<p class="precios__feature">Asesor&iacute;a Profesional.</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<a class="precios__preview-link" href="https://www.imprentaelzocalo.cl/product/anuario-escolar-tapa-dura-el-zocalo" target="_blank">Previsualizar este anuario</a></div>
+					</div>
+				</div>
+				<!-- Plan Premium College -->
+				<div class="col-12 col-md-4">
+					<div class="precios__column">
+	
+						<h3 class="precios__plan-title">PREMIUM COLLEGE</h3>
+	
+						<p class="precios__plan-desc">Dise&ntilde;ado para quienes no quieren dejar nada fuera. Espacio ilimitado para cada detalle, historia y recuerdo.</p>
+						<div class="precios__price-container"><span class="precios__price">$35.990</span>
+							<span class="precios__price-info"> /IVA incluido, por unidad.<br> /tiraje de 40 unidades. </span></div>
+						<a class="btn precios__button" href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F">Conversa con un ejecutivo</a>
+						<hr class="precios__divider">
+						<div class="precios__features">
+	
+							<h4 class="precios__features-title">Incluye</h4>
+	
+							<p class="precios__feature"><strong>Hasta 150 p&aacute;ginas full color en couch&eacute; 130g.</strong></p>
+	
+							<p class="precios__feature"><strong>Tapa dura emplacada.</strong></p>
+	
+							<p class="precios__feature"><strong>Encuadernado cosido encolado.</strong></p>
+	
+							<p class="precios__feature">Secciones: Retratos Alumnos / Cuerpo Docente / Collages / Rinc&oacute;n de los Recuerdos / Mensaje del Director(a) / Hitos Importantes</p>
+	
+							<p class="precios__feature">Puedes solicitar el servicio de fotograf&iacute;a profesional de forma independiente con un costo aparte para complementar el plan si lo necesitas.</p>
+	
+							<p class="precios__feature">Asesor&iacute;a Profesional.</p>
+							<a class="precios__preview-link" href="#">Previsualizar este anuario</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center mt-5">
+	
+					<p class="precios__footnote">*Valores Referenciales que deben ser precisados en la etapa de cotizaci&oacute;n.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Sección Preguntas Frecuentes -->
+	<section class="faq">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-8 mx-auto">
+	
+					<h2 class="faq__title">PREGUNTAS
+						<br>FRECUENTES</h2>
+					<div class="faq__accordion" id="faqAccordion">
+						<!-- Pregunta 1 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse1" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;Con cu&aacute;nto tiempo de anticipaci&oacute;n debo encargar los anuarios?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse1">
+								<div class="faq__body">Recomendamos iniciar el proceso al menos 45 d&iacute;as antes de la fecha de entrega deseada si cuenta con el dise&ntilde;o de su anuario listo. Esto nos permite gestionar la maqueta (5 d&iacute;as h&aacute;biles), la producci&oacute;n (3 semanas) y cualquier ajuste necesario sin presiones. En caso de necesitar asesor&iacute;a de diseño se recomienda 60 d&iacute;as antes de la fecha de entrega requerida.</div>
+							</div>
+						</div>
+						<!-- Pregunta 2 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse2" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;Qu&eacute; pasa si no tengo experiencia dise&ntilde;ando un anuario?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse2">
+								<div class="faq__body">&iexcl;No te preocupes! Tenemos soluciones para todos los niveles de experiencia:
+									<br>
+									<br>
+									<strong>Opci&oacute;n A (Uso de Plantillas)</strong>: Puedes optar por nuestras plantillas base, ya dise&ntilde;adas y listas para usar. Solo debes enviarnos tu material (fotos y textos) y nosotros nos encargamos de integrarlo en el formato que elijas.
+									<br>
+									<br>
+									<strong>Opci&oacute;n B (Servicio de Dise&ntilde;o)</strong>: Si prefieres un trabajo &uacute;nico y a medida, te pondremos en contacto con uno de nuestros dise&ntilde;adores asociados. &Eacute;l analizar&aacute; tu proyecto y te entregar&aacute; un presupuesto personalizado de dise&ntilde;o, el cual se cotiza de forma independiente al costo de impresi&oacute;n de la memoria.</div>
+							</div>
+						</div>
+						<!-- Pregunta 3 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse3" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;Qu&eacute; pasa si no tenemos las fotos para el anuario?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse3">
+								<div class="faq__body">&iexcl;No hay problema! Para nuestro producto <strong>Premium College</strong>, incluimos el servicio de un fot&oacute;grafo profesional que realizar&aacute; la sesi&oacute;n de fotos oficial para el anuario. En el caso de los planes B&aacute;sico y Esencial (donde las fotos deben ser provistas por el curso), podemos orientarte o ponerte en contacto con servicios de fotograf&iacute;a si lo necesitas.</div>
+							</div>
+						</div>
+						<!-- Pregunta 5 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse5" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;Puedo ver c&oacute;mo quedar&aacute; el libro antes de que lo impriman masivamente?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse5">
+								<div class="faq__body">&iexcl;Absolutamente! Ese es un paso clave en nuestro proceso. Tras recibir tu material, elaboramos una maqueta en <strong>5 d&iacute;as h&aacute;biles</strong> para que revises y apruebes el resultado final antes de pasar a la producción total.</div>
+							</div>
+						</div>
+						<!-- Pregunta 6 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse6" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;Qu&eacute; archivos debo enviar para asegurar la calidad de impresi&oacute;n?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse6">
+								<div class="faq__body">Para garantizar el mejor resultado, <strong>recomendamos enviar tu dise&ntilde;o en formato PDF de alta resolución (300 dpi)</strong>. Este formato asegura que tanto tus im&aacute;genes mantengan su nitidez como los textos se impriman con m&aacute;xima definici&oacute;n. Si tienes dudas sobre c&oacute;mo exportar tu archivo o requieres apoyo t&eacute;cnico, nuestro equipo de asesor&iacute;a te guiar&aacute; paso a paso para asegurar que todo esté listo para una impresión impecable.</div>
+							</div>
+						</div>
+						<!-- Pregunta 7 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse7" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;Qu&eacute; incluye la asesor&iacute;a profesional que ofrecen?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse7">
+								<div class="faq__body">Nuestro equipo revisa la viabilidad t&eacute;cnica de tu dise&ntilde;o, apoya en la corrección de formato si es necesario y asegura que el archivo final cumpla con todos los requisitos de impresión para que el resultado sea impecable.
+									<br>
+									<br> Adem&aacute;s, si a&uacute;n <strong>no cuentas con un anuario dise&ntilde;ado</strong>, esta asesor&iacute;a incluye <strong>ponerte en contacto directo con un diseñador profesional</strong> para que pueda desarrollar tu proyecto desde cero seg&uacute;n tus necesidades.</div>
+							</div>
+						</div>
+						<!-- Pregunta 8 -->
+						<div class="faq__item">
+							<button class="faq__header collapsed" data-target="#faqCollapse8" data-toggle="collapse" type="button"> <span class="faq__question">&iquest;El despacho est&aacute; incluido en el valor final?</span> <span class="faq__icon">+</span> </button>
+							<div class="collapse" data-parent="#faqAccordion" id="faqCollapse8">
+								<div class="faq__body">Los valores publicados son referenciales. Durante la etapa de cotizaci&oacute;n inicial, definiremos los detalles de despacho y log&iacute;stica seg&uacute;n tu ubicación para entregarte un presupuesto total transparente y sin sorpresas.</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center mt-5"><a class="btn faq__button" href="https://wa.me/56945560196?text=Hola,%20me%20interesa%20cotizar%20y%20recibir%20asesor%C3%ADa%20para%20los%20anuarios%20escolares.%20%C2%BFC%C3%B3mo%20lo%20hacemos%3F" target="_blank">Conversa con un ejecutivo</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- 3. LÓGICA INTERACTIVA CON COMPATIBILIDAD DEFER -->
+<script>
+	// Yo escucho el evento nativo de carga del documento para asegurar compatibilidad con scripts 'defer'
+	document.addEventListener('DOMContentLoaded', function()
+	{
+
+		// Yo escucho el clic en el botón de WhatsApp para dejar un registro rápido
+		$('.contact-bar__whatsapp').on('click', function()
+		{
+			console.log("Yo registré un clic en el botón de contacto de WhatsApp.");
+		});
+
+		// Yo escucho el clic en el botón del Hero para desplazar de forma suave la pantalla hasta la sección de Precios
+		$('.hero__button').on('click', function(e)
+		{
+			e.preventDefault();
+
+			$('html, body').animate(
+			{
+				scrollTop: $('#precios').offset().top
+			}, 800);
+
+			console.log("Yo desplacé la pantalla suavemente hasta la sección de Precios.");
+		});
+
+		// Yo escucho el clic en cada enlace de libro para detectar cuál de los tres fue pinchado
+		$('.designs-inspiradores__book-link').on('click', function(e)
+		{
+			if ($(this).attr('href') === '#')
+			{
+				e.preventDefault();
+			}
+
+			var libroPinchado = $(this).find('img').attr('src');
+			console.log("Yo detecté un clic en el libro interactivo con la ruta: " + libroPinchado);
+		});
+
+		// Yo escucho el clic en el enlace de condiciones del flujo de trabajo
+		$('.flujo-trabajo__link').on('click', function(e)
+		{
+			if ($(this).attr('href') === '#')
+			{
+				e.preventDefault();
+			}
+			console.log("Yo registré un clic en el enlace de detalles y condiciones de trabajo.");
+		});
+
+		// Yo escucho el clic en los botones de cotización de la sección Precios
+		$('.precios__button').on('click', function(e)
+		{
+			if ($(this).attr('href') === '#')
+			{
+				e.preventDefault();
+			}
+			var planCotizado = $(this).siblings('.precios__plan-title').text();
+			console.log("Yo registré un clic para cotizar el plan: " + planCotizado);
+		});
+
+		// Yo escucho el clic en los enlaces de previsualización de anuario de la sección Precios
+		$('.precios__preview-link').on('click', function(e)
+		{
+			if ($(this).attr('href') === '#')
+			{
+				e.preventDefault();
+			}
+			var planPrevisualizado = $(this).closest('.precios__column').find('.precios__plan-title').text();
+			console.log("Yo registré un clic para previsualizar el formato del plan: " + planPrevisualizado);
+		});
+
+		// Yo escucho el clic en el botón de cotización inferior de la sección FAQ
+		$('.faq__button').on('click', function(e)
+		{
+			if ($(this).attr('href') === '#')
+			{
+				e.preventDefault();
+			}
+			console.log("Yo registré un clic en el botón de contacto de la sección Preguntas Frecuentes.");
+		});
+
+		// Yo escucho el evento nativo de apertura de Bootstrap para cambiar el signo a (-) de forma automática
+		$('.faq__item').on('show.bs.collapse', function()
+		{
+			$(this).find('.faq__icon').text('-');
+		});
+
+		// Yo escucho el evento nativo de cierre de Bootstrap para cambiar el signo a (+) de forma automática
+		$('.faq__item').on('hide.bs.collapse', function()
+		{
+			$(this).find('.faq__icon').text('+');
+		});
+
+		console.log("Yo cargué todas las secciones: Hero, Barra de Contacto, Diseños Inspiradores, Flujo de Trabajo, Precios y FAQ.");
+	});
+
+</script>
